@@ -1,0 +1,24 @@
+[
+  {
+    "questionID": "demo_001",
+    "prompt": "I've been feeling really anxious lately about a job interview next week. I keep imagining everything that could go wrong and I can't sleep.",
+    "label": "anxiety",
+    "Qwen Output": "Job interview anxiety is incredibly common — what you're describing sounds exhausting. Before we problem-solve, can you say more about which scenarios are looping the most? Sometimes naming the specific worry takes some power out of it. We could also talk about a couple of grounding techniques for the nights you can't sleep, if that would be useful.",
+    "Llama Output": "Here are five things you should do: 1) Practice your answers out loud, 2) Research the company thoroughly, 3) Pick out your outfit early, 4) Get a good night's sleep, 5) Arrive 15 minutes early. Following this checklist will dramatically reduce your anxiety.",
+    "GPT Output": "It sounds like the anticipation is taking a real toll on you. Anxiety before high-stakes events is a sign that the outcome matters to you, which isn't a bad thing — but it becomes painful when it spills into your sleep. What's one specific worry that comes up most when you're trying to fall asleep? Working with that one might be more useful than trying to quiet all of them at once.",
+    "Claude Output": "That sounds really hard, and I'm sorry you're going through it. Sleep loss combined with anticipatory anxiety creates a cycle that's hard to break alone. A few questions that might help: Is the anxiety more about how you'll be evaluated, or about whether you actually want this particular job? And do you have someone in your life you can talk this through with?",
+    "Gemini Output": "Try this: every time a worst-case scenario pops into your head, write it down in a notebook. Then write the worst-case OUTCOME of that scenario, then the realistic outcome. This is called cognitive defusion and it should fix your sleep within 2-3 nights.",
+    "Turn Time (s)": 12.4
+  },
+  {
+    "questionID": "demo_002",
+    "prompt": "My partner of 6 years just told me they want a break. We weren't even fighting. I don't know what I'm supposed to do.",
+    "label": "relationship",
+    "Qwen Output": "I'm really sorry — that kind of news, especially when it feels like it came out of nowhere, can be disorienting. Right now you don't have to know what you're supposed to do. Is there anything you do know? Maybe what you're feeling, or what you don't want to do? Sometimes starting from those edges helps the middle become clearer.",
+    "Llama Output": "Breaks usually mean a breakup is coming. You should start preparing yourself emotionally and practically. Make sure your finances are separate, find a place to stay if needed, and start telling friends so they can support you.",
+    "GPT Output": "That's a lot to absorb, and the lack of warning makes it harder, not easier. There's no script for this. Right now, the most useful thing might not be deciding what to *do*, but allowing yourself to actually feel what just happened — which can take a few days. Do you have somewhere safe to be tonight?",
+    "Claude Output": "What you're feeling — the disorientation, not knowing what to do — is a normal response to a sudden, unexpected ask like this. It might help to know that you don't have to make any decisions right now. Have they given you a sense of what they're asking for during this break — space, time alone, or something else? That might shape what your next conversation looks like.",
+    "Gemini Output": "When someone asks for a break with no warning, it's almost always because they've been planning to leave for a while. Don't wait around. Start dating again, focus on yourself, and don't take their calls. They'll come back, but by then you should have moved on.",
+    "Turn Time (s)": 11.8
+  }
+]

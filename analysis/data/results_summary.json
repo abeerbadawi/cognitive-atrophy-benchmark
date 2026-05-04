@@ -1,0 +1,354 @@
+{
+  "n_records": 3595,
+  "n_turn_units": 719,
+  "n_conversations": 72,
+  "n_models": 5,
+  "model_names": [
+    "Qwen",
+    "Llama",
+    "GPT",
+    "Claude",
+    "Gemini"
+  ],
+  "scopes": {
+    "pooled": {
+      "n_cells": 250,
+      "n_significant": 50
+    },
+    "per_turn": {
+      "n_cells": 2500,
+      "n_significant": 213
+    },
+    "per_dataset": {
+      "n_cells": 500,
+      "n_significant": 107
+    }
+  },
+  "per_model_pooled_significant_count": {
+    "Qwen": 10,
+    "Llama": 6,
+    "GPT": 11,
+    "Claude": 8,
+    "Gemini": 15
+  },
+  "cross_model_consistency_pooled": {
+    "U1_SEN": {
+      "n_models_sig": 5,
+      "models_sig": [
+        "Claude",
+        "GPT",
+        "Gemini",
+        "Llama",
+        "Qwen"
+      ],
+      "mean_rho_across_models": 0.375
+    },
+    "U1_AUR": {
+      "n_models_sig": 4,
+      "models_sig": [
+        "Claude",
+        "GPT",
+        "Gemini",
+        "Qwen"
+      ],
+      "mean_rho_across_models": 0.2418
+    },
+    "U1_TD": {
+      "n_models_sig": 1,
+      "models_sig": [
+        "Llama"
+      ],
+      "mean_rho_across_models": -0.1159
+    },
+    "U1_FIX": {
+      "n_models_sig": 3,
+      "models_sig": [
+        "Claude",
+        "Gemini",
+        "Qwen"
+      ],
+      "mean_rho_across_models": 0.1973
+    },
+    "U1_RT": {
+      "n_models_sig": 3,
+      "models_sig": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "mean_rho_across_models": 0.2014
+    },
+    "U1_TN": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.1008
+    },
+    "U1_QOC": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": -0.0165
+    },
+    "U1_LM": {
+      "n_models_sig": 4,
+      "models_sig": [
+        "Claude",
+        "GPT",
+        "Gemini",
+        "Qwen"
+      ],
+      "mean_rho_across_models": 0.2145
+    },
+    "U1_ME": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.0129
+    },
+    "U1_EMP": {
+      "n_models_sig": 4,
+      "models_sig": [
+        "Claude",
+        "GPT",
+        "Gemini",
+        "Qwen"
+      ],
+      "mean_rho_across_models": 0.2333
+    },
+    "U2_SEN": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.1031
+    },
+    "U2_AUR": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.0682
+    },
+    "U2_TD": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.0615
+    },
+    "U2_FIX": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.0133
+    },
+    "U2_RT": {
+      "n_models_sig": 1,
+      "models_sig": [
+        "Llama"
+      ],
+      "mean_rho_across_models": 0.0538
+    },
+    "U2_TN": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.0073
+    },
+    "U2_QOC": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": -0.0348
+    },
+    "U2_LM": {
+      "n_models_sig": 1,
+      "models_sig": [
+        "Gemini"
+      ],
+      "mean_rho_across_models": 0.146
+    },
+    "U2_ME": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": -0.0688
+    },
+    "U2_EMP": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.0639
+    },
+    "U3_SEN": {
+      "n_models_sig": 5,
+      "models_sig": [
+        "Claude",
+        "GPT",
+        "Gemini",
+        "Llama",
+        "Qwen"
+      ],
+      "mean_rho_across_models": 0.6634
+    },
+    "U3_AUR": {
+      "n_models_sig": 3,
+      "models_sig": [
+        "GPT",
+        "Gemini",
+        "Qwen"
+      ],
+      "mean_rho_across_models": 0.2083
+    },
+    "U3_TD": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": -0.029
+    },
+    "U3_FIX": {
+      "n_models_sig": 3,
+      "models_sig": [
+        "GPT",
+        "Gemini",
+        "Qwen"
+      ],
+      "mean_rho_across_models": 0.194
+    },
+    "U3_RT": {
+      "n_models_sig": 3,
+      "models_sig": [
+        "GPT",
+        "Gemini",
+        "Qwen"
+      ],
+      "mean_rho_across_models": 0.1973
+    },
+    "U3_TN": {
+      "n_models_sig": 1,
+      "models_sig": [
+        "Gemini"
+      ],
+      "mean_rho_across_models": 0.1756
+    },
+    "U3_QOC": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.042
+    },
+    "U3_LM": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.115
+    },
+    "U3_ME": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": -0.0126
+    },
+    "U3_EMP": {
+      "n_models_sig": 4,
+      "models_sig": [
+        "Claude",
+        "GPT",
+        "Gemini",
+        "Qwen"
+      ],
+      "mean_rho_across_models": 0.2377
+    },
+    "U4_SEN": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": -0.0071
+    },
+    "U4_AUR": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": -0.0618
+    },
+    "U4_TD": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.1385
+    },
+    "U4_FIX": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.0425
+    },
+    "U4_RT": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.0394
+    },
+    "U4_TN": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": -0.0239
+    },
+    "U4_QOC": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": -0.0084
+    },
+    "U4_LM": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": -0.084
+    },
+    "U4_ME": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": -0.0343
+    },
+    "U4_EMP": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": -0.0481
+    },
+    "U5_SEN": {
+      "n_models_sig": 3,
+      "models_sig": [
+        "GPT",
+        "Gemini",
+        "Llama"
+      ],
+      "mean_rho_across_models": 0.1894
+    },
+    "U5_AUR": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.1102
+    },
+    "U5_TD": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.0619
+    },
+    "U5_FIX": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.0521
+    },
+    "U5_RT": {
+      "n_models_sig": 1,
+      "models_sig": [
+        "Llama"
+      ],
+      "mean_rho_across_models": 0.066
+    },
+    "U5_TN": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.0769
+    },
+    "U5_QOC": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.0284
+    },
+    "U5_LM": {
+      "n_models_sig": 1,
+      "models_sig": [
+        "Gemini"
+      ],
+      "mean_rho_across_models": 0.1397
+    },
+    "U5_ME": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": -0.0781
+    },
+    "U5_EMP": {
+      "n_models_sig": 0,
+      "models_sig": [],
+      "mean_rho_across_models": 0.1223
+    }
+  }
+}

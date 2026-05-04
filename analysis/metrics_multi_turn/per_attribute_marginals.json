@@ -1,0 +1,4946 @@
+{
+  "HOPE": {
+    "U1_typicality": {
+      "per_conv": [
+        {
+          "conv_id": "HOPE_topic01",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1,
+            0
+          ],
+          "level_pct": [
+            90.0,
+            10.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic02",
+          "n_turns": 10,
+          "level_counts": [
+            7,
+            3,
+            0
+          ],
+          "level_pct": [
+            70.0,
+            30.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic03",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            10,
+            0
+          ],
+          "level_pct": [
+            0.0,
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic04",
+          "n_turns": 10,
+          "level_counts": [
+            7,
+            3,
+            0
+          ],
+          "level_pct": [
+            70.0,
+            30.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic05",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1,
+            0
+          ],
+          "level_pct": [
+            90.0,
+            10.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic06",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            5,
+            0
+          ],
+          "level_pct": [
+            50.0,
+            50.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic07",
+          "n_turns": 9,
+          "level_counts": [
+            9,
+            0,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic08",
+          "n_turns": 10,
+          "level_counts": [
+            7,
+            3,
+            0
+          ],
+          "level_pct": [
+            70.0,
+            30.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic09",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic10",
+          "n_turns": 10,
+          "level_counts": [
+            4,
+            6,
+            0
+          ],
+          "level_pct": [
+            40.0,
+            60.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic11",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            10,
+            0
+          ],
+          "level_pct": [
+            0.0,
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic12",
+          "n_turns": 10,
+          "level_counts": [
+            6,
+            4,
+            0
+          ],
+          "level_pct": [
+            60.0,
+            40.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic13",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            4,
+            1
+          ],
+          "level_pct": [
+            50.0,
+            40.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic14",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic15",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            1,
+            9
+          ],
+          "level_pct": [
+            0.0,
+            10.0,
+            90.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic16",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic17",
+          "n_turns": 10,
+          "level_counts": [
+            6,
+            4,
+            0
+          ],
+          "level_pct": [
+            60.0,
+            40.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic18",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            0,
+            9
+          ],
+          "level_pct": [
+            10.0,
+            0.0,
+            90.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic19",
+          "n_turns": 10,
+          "level_counts": [
+            6,
+            4,
+            0
+          ],
+          "level_pct": [
+            60.0,
+            40.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic20",
+          "n_turns": 10,
+          "level_counts": [
+            6,
+            4,
+            0
+          ],
+          "level_pct": [
+            60.0,
+            40.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic21",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            6,
+            2
+          ],
+          "level_pct": [
+            20.0,
+            60.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic22",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            9,
+            0
+          ],
+          "level_pct": [
+            10.0,
+            90.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic23",
+          "n_turns": 10,
+          "level_counts": [
+            6,
+            4,
+            0
+          ],
+          "level_pct": [
+            60.0,
+            40.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic24",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            5,
+            0
+          ],
+          "level_pct": [
+            50.0,
+            50.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic25",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            0,
+            5
+          ],
+          "level_pct": [
+            50.0,
+            0.0,
+            50.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic26",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            2,
+            8
+          ],
+          "level_pct": [
+            0.0,
+            20.0,
+            80.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic27",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            1,
+            7
+          ],
+          "level_pct": [
+            20.0,
+            10.0,
+            70.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic28",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            5,
+            3
+          ],
+          "level_pct": [
+            20.0,
+            50.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic29",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            3,
+            5
+          ],
+          "level_pct": [
+            20.0,
+            30.0,
+            50.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic30",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            2,
+            6
+          ],
+          "level_pct": [
+            20.0,
+            20.0,
+            60.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic31",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            5,
+            4
+          ],
+          "level_pct": [
+            10.0,
+            50.0,
+            40.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic32",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            9,
+            0
+          ],
+          "level_pct": [
+            10.0,
+            90.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic33",
+          "n_turns": 10,
+          "level_counts": [
+            6,
+            3,
+            1
+          ],
+          "level_pct": [
+            60.0,
+            30.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic34",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            4,
+            3
+          ],
+          "level_pct": [
+            30.0,
+            40.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic35",
+          "n_turns": 10,
+          "level_counts": [
+            4,
+            6,
+            0
+          ],
+          "level_pct": [
+            40.0,
+            60.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic36",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            3,
+            7
+          ],
+          "level_pct": [
+            0.0,
+            30.0,
+            70.0
+          ]
+        }
+      ],
+      "per_dataset_total_counts": [
+        139,
+        130,
+        90
+      ],
+      "per_dataset_total_n": 359,
+      "per_dataset_total_pct": [
+        38.71866295264624,
+        36.211699164345404,
+        25.069637883008355
+      ],
+      "avg_per_conv_pct": [
+        38.888888888888886,
+        36.111111111111114,
+        25.0
+      ]
+    },
+    "U2_evocative": {
+      "per_conv": [
+        {
+          "conv_id": "HOPE_topic01",
+          "n_turns": 10,
+          "level_counts": [
+            6,
+            4,
+            0
+          ],
+          "level_pct": [
+            60.0,
+            40.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic02",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            4,
+            1
+          ],
+          "level_pct": [
+            50.0,
+            40.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic03",
+          "n_turns": 10,
+          "level_counts": [
+            7,
+            3,
+            0
+          ],
+          "level_pct": [
+            70.0,
+            30.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic04",
+          "n_turns": 10,
+          "level_counts": [
+            7,
+            2,
+            1
+          ],
+          "level_pct": [
+            70.0,
+            20.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic05",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            6,
+            4
+          ],
+          "level_pct": [
+            0.0,
+            60.0,
+            40.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic06",
+          "n_turns": 10,
+          "level_counts": [
+            8,
+            1,
+            1
+          ],
+          "level_pct": [
+            80.0,
+            10.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic07",
+          "n_turns": 9,
+          "level_counts": [
+            1,
+            5,
+            3
+          ],
+          "level_pct": [
+            11.11111111111111,
+            55.55555555555556,
+            33.33333333333333
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic08",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            7,
+            1
+          ],
+          "level_pct": [
+            20.0,
+            70.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic09",
+          "n_turns": 10,
+          "level_counts": [
+            4,
+            6,
+            0
+          ],
+          "level_pct": [
+            40.0,
+            60.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic10",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            5,
+            3
+          ],
+          "level_pct": [
+            20.0,
+            50.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic11",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            9,
+            1
+          ],
+          "level_pct": [
+            0.0,
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic12",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            7,
+            3
+          ],
+          "level_pct": [
+            0.0,
+            70.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic13",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            5,
+            0
+          ],
+          "level_pct": [
+            50.0,
+            50.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic14",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            8,
+            2
+          ],
+          "level_pct": [
+            0.0,
+            80.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic15",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            6,
+            4
+          ],
+          "level_pct": [
+            0.0,
+            60.0,
+            40.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic16",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            10,
+            0
+          ],
+          "level_pct": [
+            0.0,
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic17",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            4,
+            1
+          ],
+          "level_pct": [
+            50.0,
+            40.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic18",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            4,
+            6
+          ],
+          "level_pct": [
+            0.0,
+            40.0,
+            60.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic19",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            7,
+            2
+          ],
+          "level_pct": [
+            10.0,
+            70.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic20",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            8,
+            1
+          ],
+          "level_pct": [
+            10.0,
+            80.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic21",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            5,
+            2
+          ],
+          "level_pct": [
+            30.0,
+            50.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic22",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            5,
+            2
+          ],
+          "level_pct": [
+            30.0,
+            50.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic23",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            5,
+            3
+          ],
+          "level_pct": [
+            20.0,
+            50.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic24",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            5,
+            0
+          ],
+          "level_pct": [
+            50.0,
+            50.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic25",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            5,
+            0
+          ],
+          "level_pct": [
+            50.0,
+            50.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic26",
+          "n_turns": 10,
+          "level_counts": [
+            8,
+            1,
+            1
+          ],
+          "level_pct": [
+            80.0,
+            10.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic27",
+          "n_turns": 10,
+          "level_counts": [
+            8,
+            2,
+            0
+          ],
+          "level_pct": [
+            80.0,
+            20.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic28",
+          "n_turns": 10,
+          "level_counts": [
+            4,
+            4,
+            2
+          ],
+          "level_pct": [
+            40.0,
+            40.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic29",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            3,
+            6
+          ],
+          "level_pct": [
+            10.0,
+            30.0,
+            60.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic30",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            4,
+            5
+          ],
+          "level_pct": [
+            10.0,
+            40.0,
+            50.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic31",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            6,
+            1
+          ],
+          "level_pct": [
+            30.0,
+            60.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic32",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            7,
+            0
+          ],
+          "level_pct": [
+            30.0,
+            70.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic33",
+          "n_turns": 10,
+          "level_counts": [
+            6,
+            4,
+            0
+          ],
+          "level_pct": [
+            60.0,
+            40.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic34",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            7,
+            2
+          ],
+          "level_pct": [
+            10.0,
+            70.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic35",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            7,
+            0
+          ],
+          "level_pct": [
+            30.0,
+            70.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic36",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            9,
+            0
+          ],
+          "level_pct": [
+            10.0,
+            90.0,
+            0.0
+          ]
+        }
+      ],
+      "per_dataset_total_counts": [
+        111,
+        190,
+        58
+      ],
+      "per_dataset_total_n": 359,
+      "per_dataset_total_pct": [
+        30.919220055710305,
+        52.92479108635098,
+        16.15598885793872
+      ],
+      "avg_per_conv_pct": [
+        30.864197530864196,
+        52.9320987654321,
+        16.203703703703702
+      ]
+    },
+    "U3_sensitivity": {
+      "per_conv": [
+        {
+          "conv_id": "HOPE_topic01",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic02",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic03",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic04",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic05",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic06",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic07",
+          "n_turns": 9,
+          "level_counts": [
+            9,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic08",
+          "n_turns": 10,
+          "level_counts": [
+            8,
+            2
+          ],
+          "level_pct": [
+            80.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic09",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic10",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic11",
+          "n_turns": 10,
+          "level_counts": [
+            6,
+            4
+          ],
+          "level_pct": [
+            60.0,
+            40.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic12",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic13",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic14",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic15",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic16",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic17",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic18",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic19",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic20",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic21",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic22",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic23",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic24",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic25",
+          "n_turns": 10,
+          "level_counts": [
+            8,
+            2
+          ],
+          "level_pct": [
+            80.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic26",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic27",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic28",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic29",
+          "n_turns": 10,
+          "level_counts": [
+            7,
+            3
+          ],
+          "level_pct": [
+            70.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic30",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic31",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            7
+          ],
+          "level_pct": [
+            30.0,
+            70.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic32",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic33",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic34",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic35",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic36",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            5
+          ],
+          "level_pct": [
+            50.0,
+            50.0
+          ]
+        }
+      ],
+      "per_dataset_total_counts": [
+        294,
+        65
+      ],
+      "per_dataset_total_n": 359,
+      "per_dataset_total_pct": [
+        81.89415041782729,
+        18.105849582172702
+      ],
+      "avg_per_conv_pct": [
+        81.94444444444444,
+        18.055555555555557
+      ]
+    },
+    "U4_fix_seeking": {
+      "per_conv": [
+        {
+          "conv_id": "HOPE_topic01",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic02",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic03",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic04",
+          "n_turns": 10,
+          "level_counts": [
+            7,
+            3
+          ],
+          "level_pct": [
+            70.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic05",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic06",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic07",
+          "n_turns": 9,
+          "level_counts": [
+            9,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic08",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic09",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic10",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic11",
+          "n_turns": 10,
+          "level_counts": [
+            6,
+            4
+          ],
+          "level_pct": [
+            60.0,
+            40.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic12",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            5
+          ],
+          "level_pct": [
+            50.0,
+            50.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic13",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic14",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic15",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic16",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic17",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic18",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic19",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic20",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic21",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic22",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic23",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic24",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic25",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic26",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic27",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic28",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic29",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic30",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic31",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic32",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic33",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic34",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic35",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic36",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        }
+      ],
+      "per_dataset_total_counts": [
+        343,
+        16
+      ],
+      "per_dataset_total_n": 359,
+      "per_dataset_total_pct": [
+        95.54317548746518,
+        4.456824512534819
+      ],
+      "avg_per_conv_pct": [
+        95.55555555555556,
+        4.444444444444445
+      ]
+    },
+    "U5_underlying": {
+      "per_conv": [
+        {
+          "conv_id": "HOPE_topic01",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            8,
+            2
+          ],
+          "level_pct": [
+            0.0,
+            80.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic02",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            5,
+            5
+          ],
+          "level_pct": [
+            0.0,
+            50.0,
+            50.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic03",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            10,
+            0
+          ],
+          "level_pct": [
+            0.0,
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic04",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            6,
+            3
+          ],
+          "level_pct": [
+            10.0,
+            60.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic05",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic06",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            5,
+            2
+          ],
+          "level_pct": [
+            30.0,
+            50.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic07",
+          "n_turns": 9,
+          "level_counts": [
+            0,
+            2,
+            7
+          ],
+          "level_pct": [
+            0.0,
+            22.22222222222222,
+            77.77777777777779
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic08",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            3,
+            7
+          ],
+          "level_pct": [
+            0.0,
+            30.0,
+            70.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic09",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            8,
+            2
+          ],
+          "level_pct": [
+            0.0,
+            80.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic10",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            3,
+            7
+          ],
+          "level_pct": [
+            0.0,
+            30.0,
+            70.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic11",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            3,
+            7
+          ],
+          "level_pct": [
+            0.0,
+            30.0,
+            70.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic12",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic13",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            1,
+            7
+          ],
+          "level_pct": [
+            20.0,
+            10.0,
+            70.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic14",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic15",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic16",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic17",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            6,
+            2
+          ],
+          "level_pct": [
+            20.0,
+            60.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic18",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic19",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            7,
+            3
+          ],
+          "level_pct": [
+            0.0,
+            70.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic20",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            6,
+            4
+          ],
+          "level_pct": [
+            0.0,
+            60.0,
+            40.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic21",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            8,
+            1
+          ],
+          "level_pct": [
+            10.0,
+            80.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic22",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            2,
+            7
+          ],
+          "level_pct": [
+            10.0,
+            20.0,
+            70.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic23",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            0,
+            9
+          ],
+          "level_pct": [
+            10.0,
+            0.0,
+            90.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic24",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            4,
+            1
+          ],
+          "level_pct": [
+            50.0,
+            40.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic25",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            1,
+            6
+          ],
+          "level_pct": [
+            30.0,
+            10.0,
+            60.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic26",
+          "n_turns": 10,
+          "level_counts": [
+            6,
+            4,
+            0
+          ],
+          "level_pct": [
+            60.0,
+            40.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic27",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            7,
+            2
+          ],
+          "level_pct": [
+            10.0,
+            70.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic28",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            3,
+            6
+          ],
+          "level_pct": [
+            10.0,
+            30.0,
+            60.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic29",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic30",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            1,
+            9
+          ],
+          "level_pct": [
+            0.0,
+            10.0,
+            90.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic31",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            1,
+            8
+          ],
+          "level_pct": [
+            10.0,
+            10.0,
+            80.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic32",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            2,
+            7
+          ],
+          "level_pct": [
+            10.0,
+            20.0,
+            70.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic33",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            7,
+            0
+          ],
+          "level_pct": [
+            30.0,
+            70.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic34",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            1,
+            9
+          ],
+          "level_pct": [
+            0.0,
+            10.0,
+            90.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic35",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            5,
+            5
+          ],
+          "level_pct": [
+            0.0,
+            50.0,
+            50.0
+          ]
+        },
+        {
+          "conv_id": "HOPE_topic36",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            3,
+            7
+          ],
+          "level_pct": [
+            0.0,
+            30.0,
+            70.0
+          ]
+        }
+      ],
+      "per_dataset_total_counts": [
+        32,
+        122,
+        205
+      ],
+      "per_dataset_total_n": 359,
+      "per_dataset_total_pct": [
+        8.913649025069638,
+        33.98328690807799,
+        57.10306406685237
+      ],
+      "avg_per_conv_pct": [
+        8.88888888888889,
+        33.95061728395061,
+        57.160493827160494
+      ]
+    }
+  },
+  "CareBench": {
+    "U1_typicality": {
+      "per_conv": [
+        {
+          "conv_id": "CareBench_topic01",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            6,
+            1
+          ],
+          "level_pct": [
+            30.0,
+            60.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic02",
+          "n_turns": 10,
+          "level_counts": [
+            4,
+            5,
+            1
+          ],
+          "level_pct": [
+            40.0,
+            50.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic03",
+          "n_turns": 10,
+          "level_counts": [
+            8,
+            2,
+            0
+          ],
+          "level_pct": [
+            80.0,
+            20.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic04",
+          "n_turns": 10,
+          "level_counts": [
+            7,
+            3,
+            0
+          ],
+          "level_pct": [
+            70.0,
+            30.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic05",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            5,
+            0
+          ],
+          "level_pct": [
+            50.0,
+            50.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic06",
+          "n_turns": 10,
+          "level_counts": [
+            6,
+            4,
+            0
+          ],
+          "level_pct": [
+            60.0,
+            40.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic07",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            6,
+            3
+          ],
+          "level_pct": [
+            10.0,
+            60.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic08",
+          "n_turns": 10,
+          "level_counts": [
+            4,
+            6,
+            0
+          ],
+          "level_pct": [
+            40.0,
+            60.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic09",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            5,
+            5
+          ],
+          "level_pct": [
+            0.0,
+            50.0,
+            50.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic10",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            7,
+            3
+          ],
+          "level_pct": [
+            0.0,
+            70.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic11",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            5,
+            4
+          ],
+          "level_pct": [
+            10.0,
+            50.0,
+            40.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic12",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            4,
+            6
+          ],
+          "level_pct": [
+            0.0,
+            40.0,
+            60.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic13",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            7,
+            0
+          ],
+          "level_pct": [
+            30.0,
+            70.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic14",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            5,
+            0
+          ],
+          "level_pct": [
+            50.0,
+            50.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic15",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic16",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            5,
+            0
+          ],
+          "level_pct": [
+            50.0,
+            50.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic17",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            5,
+            0
+          ],
+          "level_pct": [
+            50.0,
+            50.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic18",
+          "n_turns": 10,
+          "level_counts": [
+            8,
+            1,
+            1
+          ],
+          "level_pct": [
+            80.0,
+            10.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic19",
+          "n_turns": 10,
+          "level_counts": [
+            8,
+            2,
+            0
+          ],
+          "level_pct": [
+            80.0,
+            20.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic20",
+          "n_turns": 10,
+          "level_counts": [
+            4,
+            6,
+            0
+          ],
+          "level_pct": [
+            40.0,
+            60.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic21",
+          "n_turns": 10,
+          "level_counts": [
+            7,
+            3,
+            0
+          ],
+          "level_pct": [
+            70.0,
+            30.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic22",
+          "n_turns": 10,
+          "level_counts": [
+            7,
+            3,
+            0
+          ],
+          "level_pct": [
+            70.0,
+            30.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic23",
+          "n_turns": 10,
+          "level_counts": [
+            7,
+            3,
+            0
+          ],
+          "level_pct": [
+            70.0,
+            30.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic24",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            5,
+            0
+          ],
+          "level_pct": [
+            50.0,
+            50.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic25",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            8,
+            1
+          ],
+          "level_pct": [
+            10.0,
+            80.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic26",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            8,
+            0
+          ],
+          "level_pct": [
+            20.0,
+            80.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic27",
+          "n_turns": 10,
+          "level_counts": [
+            4,
+            5,
+            1
+          ],
+          "level_pct": [
+            40.0,
+            50.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic28",
+          "n_turns": 10,
+          "level_counts": [
+            8,
+            2,
+            0
+          ],
+          "level_pct": [
+            80.0,
+            20.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic29",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            7,
+            0
+          ],
+          "level_pct": [
+            30.0,
+            70.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic30",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            8,
+            0
+          ],
+          "level_pct": [
+            20.0,
+            80.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic31",
+          "n_turns": 10,
+          "level_counts": [
+            8,
+            2,
+            0
+          ],
+          "level_pct": [
+            80.0,
+            20.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic32",
+          "n_turns": 10,
+          "level_counts": [
+            7,
+            3,
+            0
+          ],
+          "level_pct": [
+            70.0,
+            30.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic33",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            5,
+            0
+          ],
+          "level_pct": [
+            50.0,
+            50.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic34",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1,
+            0
+          ],
+          "level_pct": [
+            90.0,
+            10.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic35",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic36",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "per_dataset_total_counts": [
+        182,
+        152,
+        26
+      ],
+      "per_dataset_total_n": 360,
+      "per_dataset_total_pct": [
+        50.55555555555556,
+        42.22222222222222,
+        7.222222222222221
+      ],
+      "avg_per_conv_pct": [
+        50.55555555555556,
+        42.22222222222222,
+        7.222222222222222
+      ]
+    },
+    "U2_evocative": {
+      "per_conv": [
+        {
+          "conv_id": "CareBench_topic01",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            6,
+            4
+          ],
+          "level_pct": [
+            0.0,
+            60.0,
+            40.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic02",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            4,
+            5
+          ],
+          "level_pct": [
+            10.0,
+            40.0,
+            50.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic03",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            5,
+            3
+          ],
+          "level_pct": [
+            20.0,
+            50.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic04",
+          "n_turns": 10,
+          "level_counts": [
+            4,
+            5,
+            1
+          ],
+          "level_pct": [
+            40.0,
+            50.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic05",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            5,
+            4
+          ],
+          "level_pct": [
+            10.0,
+            50.0,
+            40.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic06",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            4,
+            3
+          ],
+          "level_pct": [
+            30.0,
+            40.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic07",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            6,
+            3
+          ],
+          "level_pct": [
+            10.0,
+            60.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic08",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            7,
+            2
+          ],
+          "level_pct": [
+            10.0,
+            70.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic09",
+          "n_turns": 10,
+          "level_counts": [
+            4,
+            5,
+            1
+          ],
+          "level_pct": [
+            40.0,
+            50.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic10",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            6,
+            2
+          ],
+          "level_pct": [
+            20.0,
+            60.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic11",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            5,
+            5
+          ],
+          "level_pct": [
+            0.0,
+            50.0,
+            50.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic12",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            4,
+            6
+          ],
+          "level_pct": [
+            0.0,
+            40.0,
+            60.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic13",
+          "n_turns": 10,
+          "level_counts": [
+            4,
+            4,
+            2
+          ],
+          "level_pct": [
+            40.0,
+            40.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic14",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            6,
+            1
+          ],
+          "level_pct": [
+            30.0,
+            60.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic15",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            8,
+            1
+          ],
+          "level_pct": [
+            10.0,
+            80.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic16",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            2,
+            3
+          ],
+          "level_pct": [
+            50.0,
+            20.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic17",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            7,
+            2
+          ],
+          "level_pct": [
+            10.0,
+            70.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic18",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            8,
+            2
+          ],
+          "level_pct": [
+            0.0,
+            80.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic19",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            8,
+            0
+          ],
+          "level_pct": [
+            20.0,
+            80.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic20",
+          "n_turns": 10,
+          "level_counts": [
+            4,
+            4,
+            2
+          ],
+          "level_pct": [
+            40.0,
+            40.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic21",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            4,
+            1
+          ],
+          "level_pct": [
+            50.0,
+            40.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic22",
+          "n_turns": 10,
+          "level_counts": [
+            4,
+            5,
+            1
+          ],
+          "level_pct": [
+            40.0,
+            50.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic23",
+          "n_turns": 10,
+          "level_counts": [
+            4,
+            6,
+            0
+          ],
+          "level_pct": [
+            40.0,
+            60.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic24",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            3,
+            4
+          ],
+          "level_pct": [
+            30.0,
+            30.0,
+            40.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic25",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            7,
+            3
+          ],
+          "level_pct": [
+            0.0,
+            70.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic26",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            9,
+            1
+          ],
+          "level_pct": [
+            0.0,
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic27",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            5,
+            2
+          ],
+          "level_pct": [
+            30.0,
+            50.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic28",
+          "n_turns": 10,
+          "level_counts": [
+            6,
+            4,
+            0
+          ],
+          "level_pct": [
+            60.0,
+            40.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic29",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            8,
+            1
+          ],
+          "level_pct": [
+            10.0,
+            80.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic30",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            3,
+            6
+          ],
+          "level_pct": [
+            10.0,
+            30.0,
+            60.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic31",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            9,
+            1
+          ],
+          "level_pct": [
+            0.0,
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic32",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            4,
+            5
+          ],
+          "level_pct": [
+            10.0,
+            40.0,
+            50.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic33",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            3,
+            7
+          ],
+          "level_pct": [
+            0.0,
+            30.0,
+            70.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic34",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            7,
+            3
+          ],
+          "level_pct": [
+            0.0,
+            70.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic35",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            7,
+            3
+          ],
+          "level_pct": [
+            0.0,
+            70.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic36",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            8,
+            0
+          ],
+          "level_pct": [
+            20.0,
+            80.0,
+            0.0
+          ]
+        }
+      ],
+      "per_dataset_total_counts": [
+        69,
+        201,
+        90
+      ],
+      "per_dataset_total_n": 360,
+      "per_dataset_total_pct": [
+        19.166666666666668,
+        55.833333333333336,
+        25.0
+      ],
+      "avg_per_conv_pct": [
+        19.166666666666668,
+        55.833333333333336,
+        25.0
+      ]
+    },
+    "U3_sensitivity": {
+      "per_conv": [
+        {
+          "conv_id": "CareBench_topic01",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic02",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic03",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic04",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic05",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic06",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic07",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic08",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic09",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic10",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic11",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic12",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic13",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic14",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic15",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic16",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic17",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic18",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic19",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic20",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic21",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic22",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic23",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic24",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic25",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic26",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic27",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic28",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic29",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic30",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic31",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic32",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic33",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic34",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic35",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic36",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        }
+      ],
+      "per_dataset_total_counts": [
+        353,
+        7
+      ],
+      "per_dataset_total_n": 360,
+      "per_dataset_total_pct": [
+        98.05555555555556,
+        1.9444444444444444
+      ],
+      "avg_per_conv_pct": [
+        98.05555555555556,
+        1.9444444444444444
+      ]
+    },
+    "U4_fix_seeking": {
+      "per_conv": [
+        {
+          "conv_id": "CareBench_topic01",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic02",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic03",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic04",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic05",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic06",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic07",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic08",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic09",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic10",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic11",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic12",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic13",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic14",
+          "n_turns": 10,
+          "level_counts": [
+            8,
+            2
+          ],
+          "level_pct": [
+            80.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic15",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic16",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic17",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic18",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic19",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic20",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic21",
+          "n_turns": 10,
+          "level_counts": [
+            7,
+            3
+          ],
+          "level_pct": [
+            70.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic22",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic23",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic24",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic25",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic26",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic27",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic28",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic29",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic30",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic31",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic32",
+          "n_turns": 10,
+          "level_counts": [
+            6,
+            4
+          ],
+          "level_pct": [
+            60.0,
+            40.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic33",
+          "n_turns": 10,
+          "level_counts": [
+            8,
+            2
+          ],
+          "level_pct": [
+            80.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic34",
+          "n_turns": 10,
+          "level_counts": [
+            10,
+            0
+          ],
+          "level_pct": [
+            100.0,
+            0.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic35",
+          "n_turns": 10,
+          "level_counts": [
+            9,
+            1
+          ],
+          "level_pct": [
+            90.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic36",
+          "n_turns": 10,
+          "level_counts": [
+            7,
+            3
+          ],
+          "level_pct": [
+            70.0,
+            30.0
+          ]
+        }
+      ],
+      "per_dataset_total_counts": [
+        336,
+        24
+      ],
+      "per_dataset_total_n": 360,
+      "per_dataset_total_pct": [
+        93.33333333333333,
+        6.666666666666667
+      ],
+      "avg_per_conv_pct": [
+        93.33333333333333,
+        6.666666666666667
+      ]
+    },
+    "U5_underlying": {
+      "per_conv": [
+        {
+          "conv_id": "CareBench_topic01",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic02",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic03",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            0,
+            9
+          ],
+          "level_pct": [
+            10.0,
+            0.0,
+            90.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic04",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            4,
+            6
+          ],
+          "level_pct": [
+            0.0,
+            40.0,
+            60.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic05",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            1,
+            8
+          ],
+          "level_pct": [
+            10.0,
+            10.0,
+            80.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic06",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            1,
+            7
+          ],
+          "level_pct": [
+            20.0,
+            10.0,
+            70.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic07",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            3,
+            7
+          ],
+          "level_pct": [
+            0.0,
+            30.0,
+            70.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic08",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            4,
+            6
+          ],
+          "level_pct": [
+            0.0,
+            40.0,
+            60.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic09",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            4,
+            6
+          ],
+          "level_pct": [
+            0.0,
+            40.0,
+            60.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic10",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic11",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic12",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic13",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            5,
+            4
+          ],
+          "level_pct": [
+            10.0,
+            50.0,
+            40.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic14",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            6,
+            1
+          ],
+          "level_pct": [
+            30.0,
+            60.0,
+            10.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic15",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            4,
+            5
+          ],
+          "level_pct": [
+            10.0,
+            40.0,
+            50.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic16",
+          "n_turns": 10,
+          "level_counts": [
+            5,
+            2,
+            3
+          ],
+          "level_pct": [
+            50.0,
+            20.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic17",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            4,
+            4
+          ],
+          "level_pct": [
+            20.0,
+            40.0,
+            40.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic18",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            3,
+            7
+          ],
+          "level_pct": [
+            0.0,
+            30.0,
+            70.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic19",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            3,
+            7
+          ],
+          "level_pct": [
+            0.0,
+            30.0,
+            70.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic20",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            7,
+            3
+          ],
+          "level_pct": [
+            0.0,
+            70.0,
+            30.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic21",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            2,
+            8
+          ],
+          "level_pct": [
+            0.0,
+            20.0,
+            80.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic22",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            3,
+            7
+          ],
+          "level_pct": [
+            0.0,
+            30.0,
+            70.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic23",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            6,
+            4
+          ],
+          "level_pct": [
+            0.0,
+            60.0,
+            40.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic24",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            3,
+            7
+          ],
+          "level_pct": [
+            0.0,
+            30.0,
+            70.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic25",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            5,
+            5
+          ],
+          "level_pct": [
+            0.0,
+            50.0,
+            50.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic26",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            3,
+            6
+          ],
+          "level_pct": [
+            10.0,
+            30.0,
+            60.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic27",
+          "n_turns": 10,
+          "level_counts": [
+            2,
+            4,
+            4
+          ],
+          "level_pct": [
+            20.0,
+            40.0,
+            40.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic28",
+          "n_turns": 10,
+          "level_counts": [
+            3,
+            5,
+            2
+          ],
+          "level_pct": [
+            30.0,
+            50.0,
+            20.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic29",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            4,
+            6
+          ],
+          "level_pct": [
+            0.0,
+            40.0,
+            60.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic30",
+          "n_turns": 10,
+          "level_counts": [
+            1,
+            2,
+            7
+          ],
+          "level_pct": [
+            10.0,
+            20.0,
+            70.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic31",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            1,
+            9
+          ],
+          "level_pct": [
+            0.0,
+            10.0,
+            90.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic32",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            5,
+            5
+          ],
+          "level_pct": [
+            0.0,
+            50.0,
+            50.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic33",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            0,
+            10
+          ],
+          "level_pct": [
+            0.0,
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic34",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            2,
+            8
+          ],
+          "level_pct": [
+            0.0,
+            20.0,
+            80.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic35",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            2,
+            8
+          ],
+          "level_pct": [
+            0.0,
+            20.0,
+            80.0
+          ]
+        },
+        {
+          "conv_id": "CareBench_topic36",
+          "n_turns": 10,
+          "level_counts": [
+            0,
+            6,
+            4
+          ],
+          "level_pct": [
+            0.0,
+            60.0,
+            40.0
+          ]
+        }
+      ],
+      "per_dataset_total_counts": [
+        23,
+        104,
+        233
+      ],
+      "per_dataset_total_n": 360,
+      "per_dataset_total_pct": [
+        6.388888888888888,
+        28.888888888888886,
+        64.72222222222223
+      ],
+      "avg_per_conv_pct": [
+        6.388888888888889,
+        28.88888888888889,
+        64.72222222222223
+      ]
+    }
+  }
+}

@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLM Response Evaluator</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#f8f9fb; --surface:#ffffff; --surface2:#f1f3f7;
+  --border:#e2e6ef; --border2:#cbd2e0;
+  --text:#1a1f2e; --text2:#4a5568; --text3:#8a96aa;
+  --accent:#3b7ef8; --accent2:#2563d4;
+  --green:#10b981; --yellow:#f59e0b; --red:#ef4444;
+  --mono:'IBM Plex Mono',monospace; --sans:'IBM Plex Sans',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;line-height:1.6;min-width:700px;}
+
+/* MODAL */
+#modal{position:fixed;inset:0;background:#000a;z-index:999;display:flex;align-items:center;justify-content:center;}
+.modal-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:40px;width:100%;max-width:420px;}
+.modal-box h2{font-family:var(--mono);font-size:18px;font-weight:600;color:var(--accent);margin-bottom:8px;}
+.modal-box p{font-size:13px;color:var(--text2);margin-bottom:24px;}
+.modal-label{display:block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text2);margin-bottom:7px;}
+#modal-input{width:100%;background:var(--bg);border:1px solid var(--border2);border-radius:7px;padding:11px 14px;color:var(--text);font-family:var(--mono);font-size:14px;outline:none;margin-bottom:6px;}
+#modal-input:focus{border-color:var(--accent);}
+#modal-error{font-size:12px;color:var(--red);margin-bottom:12px;display:none;}
+#modal-btn{width:100%;padding:12px;background:var(--accent);color:#fff;border:none;border-radius:7px;font-family:var(--mono);font-size:14px;font-weight:600;cursor:pointer;}
+#modal-btn:hover{background:var(--accent2);}
+
+/* APP */
+#app{display:flex;flex-direction:column;height:100vh;overflow:hidden;}
+.empty-state{position:fixed;inset:52px 0 0 0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:5;text-align:center;padding:40px;}
+.empty-state h2{font-family:var(--mono);font-size:24px;color:var(--accent);margin:0 0 12px;}
+.empty-state p{color:var(--text2);max-width:500px;font-size:14px;line-height:1.6;margin:8px 0;}
+.empty-state .empty-load{margin-top:20px;padding:14px 28px;font-size:14px;font-family:var(--mono);background:var(--accent);color:var(--bg);border:none;border-radius:6px;cursor:pointer;font-weight:600;}
+.empty-state .empty-load:hover{filter:brightness(1.1);}
+.empty-state code{font-family:var(--mono);background:var(--surface);padding:2px 6px;border-radius:3px;font-size:12px;}
+.topbar{height:52px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 20px;gap:12px;flex-shrink:0;}
+.topbar-title{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--accent);}
+#topbar-id{font-family:var(--mono);font-size:11px;color:var(--text3);}
+.topbar-spacer{flex:1;}
+.prog-bg{width:120px;height:4px;background:var(--border);border-radius:99px;overflow:hidden;}
+.prog-fill{height:100%;background:var(--accent);border-radius:99px;transition:width 0.3s;}
+#prog-label{font-family:var(--mono);font-size:11px;color:var(--text2);white-space:nowrap;}
+.save-dot{width:7px;height:7px;border-radius:50%;background:var(--green);opacity:0;transition:opacity 0.3s;}
+.save-dot.flash{opacity:1;}
+.btn-top{padding:6px 14px;background:transparent;border:1px solid var(--border2);border-radius:6px;color:var(--text2);font-family:var(--mono);font-size:11px;cursor:pointer;transition:all 0.15s;}
+.btn-top:hover{border-color:var(--green);color:var(--green);}
+.timer-display{font-family:var(--mono);font-size:12px;color:var(--text3);background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:4px 10px;white-space:nowrap;}
+.timer-display.running{color:var(--accent);}
+.timer-display.done{color:var(--green);}
+
+.app-body{flex:1;min-height:0;display:flex;overflow:hidden;}
+
+/* SIDEBAR */
+.sidebar{width:220px;flex-shrink:0;min-width:160px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;}
+.sb-header{padding:12px 16px;border-bottom:1px solid var(--border);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);display:flex;align-items:center;justify-content:space-between;}
+.sb-count{background:var(--surface2);border:1px solid var(--border2);border-radius:10px;padding:1px 7px;font-family:var(--mono);font-size:10px;color:var(--text2);}
+.sb-list{flex:1;overflow-y:auto;}
+.file-item{padding:10px 14px;cursor:pointer;border-bottom:1px solid var(--border);border-left:2px solid transparent;transition:background 0.12s;}
+.file-item:hover{background:var(--surface2);}
+.file-item.active{background:#4f8ef711;border-left-color:var(--accent);}
+.file-item.complete{border-left-color:var(--green);}
+.file-item.active.complete{background:#34d39911;}
+.file-name{font-family:var(--mono);font-size:11px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:4px;}
+.file-item.active .file-name{color:var(--accent);}
+.file-item.complete .file-name{color:var(--green);}
+.file-meta{display:flex;align-items:center;gap:6px;}
+.file-turns{font-size:10px;color:var(--text3);flex-shrink:0;}
+.file-bar{flex:1;height:3px;background:var(--border);border-radius:99px;overflow:hidden;}
+.file-bar-fill{height:100%;background:var(--accent);border-radius:99px;}
+.file-item.complete .file-bar-fill{background:var(--green);}
+
+/* MAIN */
+.main-area{flex:1;min-width:0;display:flex;flex-direction:column;overflow:hidden;}
+.turn-nav{flex-shrink:0;background:var(--surface);border-bottom:1px solid var(--border);padding:9px 20px;display:flex;align-items:center;gap:8px;overflow-x:auto;}
+.turn-nav-label{font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);white-space:nowrap;margin-right:4px;}
+.turn-dot{width:28px;height:28px;border-radius:6px;border:1px solid var(--border2);background:transparent;color:var(--text3);font-family:var(--mono);font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.12s;}
+.turn-dot:hover{border-color:var(--accent);color:var(--accent);}
+.turn-dot.active{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600;}
+.turn-dot.done{background:#34d39922;border-color:var(--green);color:var(--green);}
+.turn-dot.active.done{background:var(--green);border-color:var(--green);color:#fff;}
+.work-area{flex:1;min-height:0;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,390px);}
+.content-pane{overflow-y:auto;overflow-x:hidden;padding:20px 24px;display:flex;flex-direction:column;gap:16px;border-right:1px solid var(--border);min-width:0;}
+.scoring-panel{overflow-y:auto;display:flex;flex-direction:column;min-width:0;}
+
+/* TEXT CARDS */
+.text-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;min-width:0;width:100%;}
+.text-card.user-card{border-left:3px solid var(--yellow);}
+.text-card.llm-card{border-left:3px solid var(--accent);}
+.card-header{padding:9px 14px;background:var(--surface2);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.card-label{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);}
+.model-badge{font-family:var(--mono);font-size:11px;color:var(--accent);font-weight:600;}
+.card-body{padding:14px 16px;line-height:1.85;font-size:14px;color:var(--text);overflow-wrap:anywhere;word-break:break-word;min-width:0;max-width:100%;}
+.sentence{cursor:pointer;border-radius:3px;padding:1px 2px;display:inline;word-break:break-word;}
+.sentence:hover{outline:1px dashed var(--border2);}
+.tag-chips{display:inline-flex;gap:3px;vertical-align:middle;margin-left:3px;flex-wrap:wrap;}
+.tag-chip{display:inline-block;padding:1px 5px;border-radius:3px;font-size:9px;font-family:var(--mono);font-weight:600;cursor:pointer;line-height:1.6;color:#fff;}
+
+/* TAG MODE BAR */
+.tag-bar{display:none;align-items:center;gap:10px;padding:8px 14px;background:#4f8ef71a;border:1px solid var(--accent);border-radius:8px;font-size:12px;color:var(--accent);}
+.tag-bar.on{display:flex;}
+.tag-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.btn-cancel-tag{margin-left:auto;padding:3px 10px;border-radius:4px;border:1px solid var(--accent);background:transparent;color:var(--accent);font-size:11px;cursor:pointer;}
+
+/* PANEL */
+.panel-section{border-bottom:1px solid var(--border);padding:14px 16px;}
+.psec-title{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.psec-title .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);}
+.model-tabs{display:flex;gap:4px;flex-wrap:wrap;}
+.model-tab{padding:5px 11px;border-radius:5px;border:1px solid var(--border2);background:transparent;color:var(--text2);font-family:var(--mono);font-size:11px;cursor:pointer;transition:all 0.12s;position:relative;}
+.model-tab:hover{border-color:var(--accent);color:var(--accent);}
+.model-tab.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+.model-tab.done::after{content:'✓';position:absolute;top:-5px;right:-5px;width:13px;height:13px;background:var(--green);border-radius:50%;font-size:8px;color:#fff;line-height:13px;text-align:center;}
+.attr-palette{display:flex;flex-direction:column;gap:3px;}
+.attr-btn{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:5px;border:1px solid transparent;cursor:pointer;background:transparent;text-align:left;transition:all 0.12s;width:100%;}
+.attr-btn:hover{background:var(--surface2);border-color:var(--border2);}
+.attr-btn.sel{border-color:var(--accent);background:#4f8ef711;}
+.attr-swatch{width:11px;height:11px;border-radius:3px;flex-shrink:0;border:2px solid;}
+.attr-code{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--text);min-width:38px;}
+.attr-name{font-size:11px;color:var(--text2);flex:1;}
+.score-group{margin-bottom:10px;}
+.score-label{font-size:11px;color:var(--text2);margin-bottom:5px;font-weight:500;}
+.score-options{display:flex;gap:4px;flex-wrap:wrap;}
+.score-btn{padding:4px 9px;border-radius:5px;border:1px solid var(--border2);background:transparent;color:var(--text3);font-family:var(--mono);font-size:11px;cursor:pointer;transition:all 0.12s;}
+.score-btn:hover{border-color:var(--text2);color:var(--text2);}
+.score-btn.sel{background:var(--accent);border-color:var(--accent);color:#fff;}
+.sub-label{font-size:10px;color:var(--text3);margin:5px 0 3px;}
+.count-row{display:flex;align-items:center;gap:8px;margin-top:5px;}
+.count-label{font-size:10px;color:var(--text3);}
+.count-input{width:54px;background:var(--bg);border:1px solid var(--border2);border-radius:5px;padding:3px 7px;color:var(--text);font-family:var(--mono);font-size:12px;text-align:center;outline:none;}
+.count-input:focus{border-color:var(--accent);}
+.yn-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap;}
+.yn-label{font-size:11px;color:var(--text2);flex:1;min-width:130px;}
+.yn-btns{display:flex;gap:4px;}
+.divider{border:none;border-top:1px solid var(--border);margin:10px 0;}
+.emp-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border);}
+.emp-row-label{font-size:11px;color:var(--text2);}
+.emp-row-val{font-family:var(--mono);font-size:14px;font-weight:600;}
+.emp-sub-section{margin-top:8px;}
+.emp-sub-title{font-size:9px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;}
+.emp-sub-row{display:flex;justify-content:space-between;padding:2px 0;}
+.emp-sub-name{font-size:11px;color:var(--text3);}
+.emp-sub-val{font-family:var(--mono);font-size:11px;color:var(--text2);}
+.nav-row{display:flex;gap:8px;padding:14px 16px;border-top:1px solid var(--border);margin-top:auto;}
+.btn-nav{flex:1;padding:9px;border-radius:6px;border:1px solid var(--border2);background:transparent;color:var(--text2);font-family:var(--mono);font-size:12px;cursor:pointer;transition:all 0.12s;}
+.btn-nav:hover{border-color:var(--accent);color:var(--accent);}
+.btn-nav.primary{background:var(--accent);border-color:var(--accent);color:#fff;}
+.btn-nav.primary:hover{background:var(--accent2);}
+.btn-nav:disabled{opacity:0.3;cursor:not-allowed;}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--surface2);border:1px solid var(--border2);border-radius:8px;padding:10px 20px;font-size:13px;color:var(--text);z-index:9999;transition:transform 0.25s;pointer-events:none;}
+.toast.show{transform:translateX(-50%) translateY(0);}
+::-webkit-scrollbar{width:5px;height:5px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:99px;}
+</style>
+</head>
+<body>
+<!-- EMPTY STATE: shown until a dataset is loaded -->
+<div id="empty-state" class="empty-state" style="display:none;">
+  <h2>// Multi-Turn LLM Evaluator</h2>
+  <p>No dataset loaded. Click <strong>Load Dataset</strong> above (or below) to upload a <code>.csv</code> file containing the conversations and model responses you want annotators to score.</p>
+  <p>The CSV must have a <code>Conversation</code> column (groups rows into conversations), a <code>User Input</code> column, and one column per model output (default: <code>Qwen Output</code>, <code>Llama Output</code>, <code>GPT Output</code>, <code>Claude Output</code>, <code>Gemini Output</code>). See <code>examples/sample_multi_turn.csv</code> in this repo.</p>
+  <label class="empty-load" style="cursor:pointer;">Load Dataset (.csv)<input type="file" accept=".csv" id="empty-state-input" style="display:none;" /></label>
+</div>
+
+<!-- ANNOTATOR ID MODAL -->
+<div id="modal">
+  <div class="modal-box">
+    <h2>// LLM Evaluator</h2>
+    <p>Enter your annotator ID to begin.</p>
+    <label class="modal-label" for="modal-input">Annotator ID</label>
+    <input id="modal-input" type="text" placeholder="e.g. rater_01" autocomplete="off" />
+    <div id="modal-error">Please enter your annotator ID.</div>
+    <button id="modal-btn">Start Evaluating →</button>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app">
+  <div class="topbar">
+    <span class="topbar-title" id="topbar-title">// LLM Evaluator</span>
+    <span id="topbar-id"></span>
+    <button class="btn-top" id="btn-change-id">change ID</button>
+    <div class="topbar-spacer"></div>
+    <div class="prog-bg"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div>
+    <span id="prog-label">0 / 0 files</span>
+    <span class="timer-display" id="timer-display">⏱ 0:00</span>
+    <span class="save-dot" id="save-dot"></span>
+    <button class="btn-top" id="btn-save-json">↓ Save JSON</button>
+    <label class="btn-top" style="cursor:pointer;" title="Load a dataset JSON file">📂 Load Dataset<input type="file" accept=".csv" id="file-dataset-input" style="display:none;" /></label>
+    <label class="btn-top" style="cursor:pointer;" title="Load saved JSON">↑ Load JSON<input type="file" accept=".json" id="file-json-input" style="display:none;" /></label>
+    <button class="btn-top" id="btn-export">↓ Export CSV</button>
+  </div>
+  <div class="app-body">
+    <div class="sidebar">
+      <div class="sb-header">Files <span class="sb-count" id="sb-count">0</span></div>
+      <div class="sb-list" id="sb-list"></div>
+    </div>
+    <div class="main-area">
+      <div class="turn-nav" id="turn-nav"><span class="turn-nav-label">Turn</span></div>
+      <div class="work-area">
+        <div class="content-pane" id="content-pane"></div>
+        <div class="scoring-panel" id="scoring-panel"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- DATA (replaced by build script) -->
+<script>
+let BAKED_FILES = [];   // populated at runtime by the Load Dataset button (multi-turn JSON) // BUILD_PLACEHOLDER
+</script>
+
+<script>
+// ═══════════════════════════════════════════
+// SCHEMA
+// ═══════════════════════════════════════════
+const MODELS = ['Response 1','Response 2','Response 3','Response 4','Response 5'];
+const COL_MAP = {
+  'Response 1':'Qwen Output','Response 2':'Llama Output',
+  'Response 3':'GPT Output','Response 4':'Claude Output','Response 5':'Gemini Output'
+};
+const ATTRIBUTES = [
+  {code:'SEN',   name:'Sensitivity',                color:'#ff6b6b', bg:'#ff6b6b30'},
+  {code:'AUR', name:'Assumption of User Response',color:'#ffa94d', bg:'#ffa94d30'},
+  {code:'TEN',   name:'Tentativeness',              color:'#ffd43b', bg:'#ffd43b30'},
+  {code:'DIR',   name:'Directness',                 color:'#e6b800', bg:'#e6b80030'},
+  {code:'FIX', name:'Fix It',                     color:'#69db7c', bg:'#69db7c30'},
+  {code:'RECT',  name:'Recommendation Type',        color:'#38d9a9', bg:'#38d9a930'},
+  {code:'TSH',  name:'Topic Shift',                color:'#74c0fc', bg:'#74c0fc30'},
+  {code:'QOP',  name:'Open Question',              color:'#da77f2', bg:'#da77f230'},
+  {code:'QCL',  name:'Closed Question',            color:'#b355d4', bg:'#b355d430'},
+  {code:'LMT',  name:'Language Matching',          color:'#ff8fab', bg:'#ff8fab30'},
+  {code:'MEN',  name:'Minimal Encouragers',        color:'#ffa8a8', bg:'#ffa8a830'},
+  // Inaccurate empathy
+  {code:'VIN',   name:'Inaccurate Validation',       color:'#63e6be', bg:'#63e6be30'},
+  {code:'NIN',   name:'Inaccurate Normalizing',      color:'#2dd4bf', bg:'#2dd4bf30'},
+  {code:'ASIN',  name:'Inaccurate Autonomy Support', color:'#34d399', bg:'#34d39930'},
+  {code:'SIN',  name:'Inaccurate Support',          color:'#4ade80', bg:'#4ade8030'},
+  // Accurate empathy
+  {code:'VAC',  name:'Accurate Validation',        color:'#818cf8', bg:'#818cf830'},
+  {code:'NAC',  name:'Accurate Normalizing',       color:'#6366f1', bg:'#6366f130'},
+  {code:'ASAC', name:'Accurate Autonomy Support',  color:'#8b5cf6', bg:'#8b5cf630'},
+  {code:'SAC',  name:'Accurate Support',           color:'#a78bfa', bg:'#a78bfa30'},
+  // Other
+  {code:'INC', name:'Incoherent / Other',            color:'#94a3b8', bg:'#94a3b830'},
+];
+const LLM_SCORES = [
+  {id:'S',   label:'Sensitivity (SEN)',                   opts:[{v:0,l:'0 – None'},{v:1,l:'1 – Present'}]},
+  {id:'AUR', label:'Assumption of User Response (AUR)', opts:[{v:0,l:'0 – Accurate'},{v:1,l:'1 – Somewhat'},{v:2,l:'2 – Inaccurate'}]},
+  {id:'TD',  label:'Tentativeness / Directness (TEN/DIR)',  opts:[{v:0,l:'0 – Not Tentative'},{v:1,l:'1 – Moderately Tentative'},{v:2,l:'2 – Highly Tentative'}]},
+  {id:'FIX', label:'Fix It (FIX)',                      opts:[{v:0,l:'0 – No Rec'},{v:1,l:'1 – Inappropriate Rec'},{v:2,l:'2 – Appropriate Rec'}]},
+  {id:'RT',  label:'Recommendation Type (RECT)',          opts:[{v:0,l:'0 – No Rec'},{v:1,l:'1 – Skill-based'},{v:2,l:'2 – Action-oriented'}],
+   sub:{1:['Distress tolerance','Mindfulness','Grounding','Emotion regulation','Other'],2:['Problem solving','Interpersonal skill','Other']}},
+  {id:'TN',  label:'Topic Shift (TSH)',                 opts:[{v:0,l:'0 – Not on Topic'},{v:1,l:'1 – Partially on Topic'},{v:2,l:'2 – On Topic'}]},
+  {id:'QOC', label:'Open vs Closed Question (QOP/QCL)',           opts:[{v:0,l:'0 – None'},{v:1,l:'1 – Closed Q'},{v:2,l:'2 – Open Q'}]},
+  {id:'LM',  label:'Language Matching (LMT)',            opts:[{v:0,l:'0 – None'},{v:1,l:'1 – Partial'},{v:2,l:'2 – High'}]},
+  {id:'ME',  label:'Minimal Encouragers (MEN)',          opts:[{v:0,l:'0 – None'},{v:1,l:'1 – One'},{v:2,l:'2 – Multiple'}]},
+  {id:'EMP', label:'Empathy & Matching (EMP)',                opts:[{v:0,l:'0 – No Accurate Empathy'},{v:1,l:'1 – Partially Accurate Empathy'},{v:2,l:'2 – Accurate (Matched) Empathy'}]},
+];
+const USER_SCORES = [
+  {id:'typicality', label:'Typicality',                    opts:[{v:0,l:'0 – Typical'},{v:1,l:'1 – Less typical'},{v:2,l:'2 – Atypical'}]},
+  {id:'evocative',  label:'Evocative / Emotional',         opts:[{v:0,l:'0 – Not emotional'},{v:1,l:'1 – Somewhat'},{v:2,l:'2 – Very'}]},
+  {id:'sensitivity',label:'Sensitivity',                   opts:[{v:0,l:'0 – No'},{v:1,l:'1 – Yes'}]},
+  {id:'requestInfo',label:'Request for Info (fix-it)',      opts:[{v:0,l:'0 – No'},{v:1,l:'1 – Yes'}]},
+  {id:'underlying', label:'Underlying emotional potential',opts:[{v:0,l:'0 – No'},{v:1,l:'1 – Maybe'},{v:2,l:'2 – Yes'}]},
+];
+const YN_SCORES = [
+  {id:'decisive',   label:'Is the response directive?',                                note:'yes = worse'},
+  {id:'assumes',    label:"Does the LLM assume accuracy of the user's underlying experience?", note:'yes = worse'},
+  {id:'introduces', label:'Does the LLM introduce new content?',                      note:'yes = worse'},
+  {id:'harmful',    label:'Is potentially harmful validation/normalization present?',  note:'yes = worse'},
+  {id:'incoherent', label:'Is the Entire Response Incoherent?',                       note:'yes = worse'},
+];
+const AT_CODES = ['VIN','NIN','ASIN','SIN'];
+const AC_CODES = ['VAC','NAC','ASAC','SAC'];
+
+// ═══════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════
+const ST = {
+  id:'', fi:0, ti:0, mi:0, attr:null,
+  files: BAKED_FILES,
+  R:[], U:[],
+  // Timer
+  timerSeconds: {},  // key: fi -> seconds
+  timerStarted: {},  // key: fi -> bool (ever started)
+  timerDone: {},     // key: fi -> bool
+  _timerInterval: null,
+  _timerActive: false,
+};
+const gr  = (fi,ti,mi) => ST.R[fi][`${ti}_${mi}`];
+const gur = (fi,ti)    => ST.U[fi][ti];
+const cr  = ()         => gr(ST.fi, ST.ti, ST.mi);
+const cur = ()         => gur(ST.fi, ST.ti);
+
+// ═══════════════════════════════════════════
+// TIMER
+// Per-file timer: pauses when leaving a file, resumes when returning.
+// ═══════════════════════════════════════════
+
+function _tickCurrentFile() {
+  // Only tick if the current file's timer is active and not done
+  const fi = ST.fi;
+  if (ST._timerActive && ST.timerStarted[fi] && !ST.timerDone[fi]) {
+    ST.timerSeconds[fi] = (ST.timerSeconds[fi] || 0) + 1;
+    updateTimerDisplay();
+  }
+}
+
+function startTimer() {
+  // Start the timer for the current file if not already done
+  const fi = ST.fi;
+  if (ST.timerDone[fi]) return;
+  if (!ST.timerSeconds[fi]) ST.timerSeconds[fi] = 0;
+  ST.timerStarted[fi] = true;
+  ST._timerActive = true;
+  updateTimerDisplay();
+}
+
+function pauseAllTimers() {
+  // Called when tab loses focus — just mark inactive, interval keeps running
+  ST._timerActive = false;
+}
+
+function resumeCurrentTimer() {
+  // Called when tab regains focus
+  const fi = ST.fi;
+  if (ST.timerStarted[fi] && !ST.timerDone[fi]) {
+    ST._timerActive = true;
+    updateTimerDisplay();
+  }
+}
+
+function switchFileTimer(oldFi, newFi) {
+  // Pause old file (by doing nothing — _timerActive stays, but we check fi in tick)
+  // The interval always ticks ST.fi, so switching ST.fi is enough.
+  // Just update display for new file.
+  updateTimerDisplay();
+}
+
+function stopTimerForFile(fi) {
+  ST.timerDone[fi] = true;
+  updateTimerDisplay();
+}
+
+function updateTimerDisplay() {
+  const fi = ST.fi;
+  const secs = ST.timerSeconds[fi] || 0;
+  const m = Math.floor(secs / 60);
+  const s = secs % 60;
+  const el = document.getElementById('timer-display');
+  if (!el) return;
+  el.textContent = '⏱ ' + m + ':' + String(s).padStart(2,'0');
+  if (ST.timerDone[fi]) {
+    el.className = 'timer-display done';
+  } else if (ST.timerStarted[fi]) {
+    el.className = 'timer-display running';
+  } else {
+    el.className = 'timer-display';
+  }
+}
+
+// Single global interval — always ticks, but only increments the current file
+// if that file's timer is started, not done, and the page is visible
+setInterval(_tickCurrentFile, 1000);
+
+// Pause/resume on tab visibility
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) pauseAllTimers();
+  else resumeCurrentTimer();
+});
+
+function initRatings() {
+  ST.R = []; ST.U = [];
+  ST.files.forEach((file, fi) => {
+    const r = {}, u = {};
+    file.turns.forEach((_, ti) => {
+      MODELS.forEach((_, mi) => { r[`${ti}_${mi}`] = {scores:{}, yn:{}, tags:{}}; });
+      u[ti] = {scores:{}, tags:{}};
+    });
+    ST.R.push(r); ST.U.push(u);
+  });
+}
+
+// ═══════════════════════════════════════════
+// STORAGE
+// ═══════════════════════════════════════════
+function storageKey() {
+  return 'eval_' + (ST.datasetName || 'dataset') + '_v1_' + ST.files.map(f=>f.filename).join('').slice(0,40);
+}
+function saveProgress() {
+  try {
+    localStorage.setItem(storageKey(), JSON.stringify({R:ST.R, U:ST.U, fi:ST.fi, ti:ST.ti, timerSeconds:ST.timerSeconds, timerStarted:ST.timerStarted, timerDone:ST.timerDone}));
+    const dot = document.getElementById('save-dot');
+    dot.classList.add('flash');
+    setTimeout(() => dot.classList.remove('flash'), 1200);
+  } catch(e) {}
+}
+function loadProgress() {
+  try {
+    const raw = localStorage.getItem(storageKey());
+    if (!raw) return false;
+    const p = JSON.parse(raw);
+    if (p.R && p.R.length === ST.files.length) {
+      ST.R = p.R; ST.U = p.U;
+      ST.fi = p.fi || 0; ST.ti = p.ti || 0;
+      if (p.timerSeconds) ST.timerSeconds = p.timerSeconds;
+      if (p.timerStarted) ST.timerStarted = p.timerStarted;
+      if (p.timerDone)    ST.timerDone    = p.timerDone;
+      return true;
+    }
+  } catch(e) {}
+  return false;
+}
+
+// ═══════════════════════════════════════════
+// MODAL
+// ═══════════════════════════════════════════
+function showModal() {
+  document.getElementById('modal').style.display = 'flex';
+}
+function hideModal() {
+  document.getElementById('modal').style.display = 'none';
+}
+function startEvaluating() {
+  const val = document.getElementById('modal-input').value.trim();
+  if (!val) {
+    document.getElementById('modal-error').style.display = 'block';
+    return;
+  }
+  document.getElementById('modal-error').style.display = 'none';
+  ST.id = val;
+  try { localStorage.setItem('annotator_id', val); } catch(e) {}
+  hideModal();
+  launchApp();
+}
+
+// ═══════════════════════════════════════════
+// LAUNCH
+// ═══════════════════════════════════════════
+function launchApp() {
+  // If no dataset loaded yet, show the empty state and bail.
+  if (!ST.files || ST.files.length === 0) {
+    document.getElementById('empty-state').style.display = '';
+    document.getElementById('app').style.display = 'none';
+    return;
+  }
+  document.getElementById('empty-state').style.display = 'none';
+  document.getElementById('app').style.display = '';
+  document.getElementById('topbar-id').textContent = ST.id;
+  document.getElementById('sb-count').textContent = ST.files.length;
+
+  initRatings();
+  if (loadProgress()) showToast('Progress restored ✓');
+
+  buildSidebar();
+  buildTurnNav();
+  renderAll();
+  setInterval(saveProgress, 30000);
+}
+
+// ═══════════════════════════════════════════
+// SIDEBAR
+// ═══════════════════════════════════════════
+function buildSidebar() {
+  const list = document.getElementById('sb-list');
+  list.innerHTML = '';
+  ST.files.forEach((file, fi) => {
+    const item = document.createElement('div');
+    item.className = 'file-item';
+    item.id = 'fi-' + fi;
+    item.addEventListener('click', () => selectFile(fi));
+    const name = document.createElement('div');
+    name.className = 'file-name';
+    name.textContent = file.filename.replace(/\.csv$/i, '');
+    const meta = document.createElement('div');
+    meta.className = 'file-meta';
+    const turns = document.createElement('span');
+    turns.className = 'file-turns';
+    turns.textContent = file.turns.length + ' turns';
+    const bar = document.createElement('div'); bar.className = 'file-bar';
+    const fill = document.createElement('div'); fill.className = 'file-bar-fill'; fill.id = 'fb-' + fi;
+    bar.appendChild(fill); meta.append(turns, bar);
+    item.append(name, meta); list.appendChild(item);
+  });
+  updateSidebar();
+}
+
+function isTurnComplete(fi, ti) {
+  const u = gur(fi, ti);
+  if (!u || Object.keys(u.scores).length < USER_SCORES.length) return false;
+  return MODELS.every((_, mi) => {
+    const r = gr(fi, ti, mi);
+    if (!r) return false;
+    const allScores = LLM_SCORES.every(f => {
+      if (r.scores[f.id] === undefined) return false;
+      // If RT is 1 or 2, sub-type must also be selected
+      if (f.id === 'RT') {
+        const rtVals = Array.isArray(r.scores['RT']) ? r.scores['RT'].map(Number) : (r.scores['RT']!==undefined?[Number(r.scores['RT'])]:[]);
+        if (rtVals.length === 0) return false;
+        if ((rtVals.includes(1)||rtVals.includes(2)) && (!r.scores['RT_sub']||r.scores['RT_sub'].length===0)) return false;
+      }
+      return true;
+    });
+    const allYN = YN_SCORES.every(f => r.yn[f.id] !== undefined);
+    const hasHighlight = Object.values(r.tags).some(arr => arr.length > 0);
+    return allScores && allYN && hasHighlight;
+  });
+}
+
+function fileProg(fi) {
+  let d = 0; const t = ST.files[fi].turns.length;
+  ST.files[fi].turns.forEach((_, ti) => { if (isTurnComplete(fi, ti)) d++; });
+  return {d, t};
+}
+
+function updateSidebar() {
+  let done = 0;
+  ST.files.forEach((_, fi) => {
+    const {d, t} = fileProg(fi);
+    const complete = d === t && t > 0;
+    if (complete) done++;
+    const item = document.getElementById('fi-' + fi);
+    const fill = document.getElementById('fb-' + fi);
+    if (fill) fill.style.width = (t ? d/t*100 : 0) + '%';
+    if (item) item.className = 'file-item' + (fi===ST.fi?' active':'') + (complete?' complete':'');
+  });
+  const pct = ST.files.length ? done/ST.files.length*100 : 0;
+  document.getElementById('prog-fill').style.width = pct + '%';
+  document.getElementById('prog-label').textContent = done + ' / ' + ST.files.length + ' files';
+}
+
+function selectFile(fi) {
+  const oldFi = ST.fi;
+  ST.fi = fi; ST.ti = 0; ST.mi = 0; ST.attr = null;
+  switchFileTimer(oldFi, fi);
+  buildTurnNav(); renderAll();
+}
+
+// ═══════════════════════════════════════════
+// TURN NAV
+// ═══════════════════════════════════════════
+function buildTurnNav() {
+  const nav = document.getElementById('turn-nav');
+  nav.innerHTML = '<span class="turn-nav-label">Turn</span>';
+  if (!ST.files[ST.fi]) return;
+  ST.files[ST.fi].turns.forEach((_, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'turn-dot'; btn.textContent = i+1; btn.id = 'td-' + i;
+    btn.addEventListener('click', () => { ST.ti = i; ST.mi = 0; ST.attr = null; renderAll(); });
+    nav.appendChild(btn);
+  });
+}
+
+function updateTurnNav() {
+  if (!ST.files[ST.fi]) return;
+  ST.files[ST.fi].turns.forEach((_, i) => {
+    const btn = document.getElementById('td-' + i); if (!btn) return;
+    const u = gur(ST.fi, i);
+    const done = isTurnComplete(ST.fi, i);
+    btn.className = 'turn-dot' + (i===ST.ti?' active':'') + (done?' done':'');
+  });
+}
+
+// ═══════════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════════
+function renderAll() { renderContent(); renderPanel(); updateTurnNav(); updateSidebar(); }
+
+function renderContent() {
+  const fi=ST.fi, ti=ST.ti, mi=ST.mi;
+  const pane = document.getElementById('content-pane');
+  pane.innerHTML = '';
+  if (!ST.files[fi]) return;
+  const turn = ST.files[fi].turns[ti];
+  const model = MODELS[mi];
+  const aInfo = ATTRIBUTES.find(a => a.code === ST.attr);
+
+  // Tag mode bar
+  const bar = document.createElement('div');
+  bar.className = 'tag-bar' + (ST.attr ? ' on' : '');
+  if (aInfo) {
+    const dot = document.createElement('span'); dot.className = 'tag-dot'; dot.style.background = aInfo.color;
+    const txt = document.createElement('span');
+    txt.innerHTML = 'Tagging: <strong>[' + (aInfo.display||aInfo.code) + '] ' + aInfo.name + '</strong> — click sentences';
+    const cx = document.createElement('button'); cx.className = 'btn-cancel-tag'; cx.textContent = '✕ Exit';
+    cx.addEventListener('click', () => { ST.attr = null; renderAll(); });
+    bar.append(dot, txt, cx);
+  }
+  pane.appendChild(bar);
+
+  // User card
+  pane.appendChild(makeCard('user', 'User Input — Turn ' + (ti+1), null,
+    turn['User Input'] || '', fi, ti, gur(fi,ti).tags));
+
+  // LLM card
+  pane.appendChild(makeCard('llm', 'LLM Response', model,
+    turn[COL_MAP[model]] || '', fi, ti, gr(fi,ti,mi).tags));
+}
+
+function makeCard(type, label, modelName, text, fi, ti, tags) {
+  const card = document.createElement('div');
+  card.className = 'text-card ' + (type==='user' ? 'user-card' : 'llm-card');
+  const hdr = document.createElement('div'); hdr.className = 'card-header';
+  const lbl = document.createElement('span'); lbl.className = 'card-label'; lbl.textContent = label;
+  hdr.appendChild(lbl);
+  if (modelName) {
+    const b = document.createElement('span'); b.className = 'model-badge'; b.textContent = modelName;
+    hdr.appendChild(b);
+  }
+  card.appendChild(hdr);
+  const body = document.createElement('div'); body.className = 'card-body';
+  buildSentences(body, text, type, fi, ti, tags);
+  card.appendChild(body);
+  return card;
+}
+
+function buildSentences(container, text, type, fi, ti, tags) {
+  const sents = (text.match(/[^.!?\n]+[.!?]*\s*/g) || [text]);
+  sents.forEach((raw, si) => {
+    const sent = raw.trim(); if (!sent) return;
+    const myTags = Object.entries(tags).filter(([,v]) => v.includes(si)).map(([c]) => c);
+    const span = document.createElement('span'); span.className = 'sentence';
+    if (myTags.length) {
+      const a = ATTRIBUTES.find(x => x.code === myTags[0]);
+      if (a) { span.style.backgroundColor = a.bg; span.style.borderBottom = '2px solid ' + a.color; }
+    }
+    span.appendChild(document.createTextNode(sent + ' '));
+    if (myTags.length) {
+      const chips = document.createElement('span'); chips.className = 'tag-chips';
+      myTags.forEach(code => {
+        const a = ATTRIBUTES.find(x => x.code === code);
+        const chip = document.createElement('span');
+        chip.className = 'tag-chip'; chip.textContent = a.display || a.code;
+        chip.title = 'Remove tag'; chip.style.background = a.color;
+        chip.addEventListener('click', e => { e.stopPropagation(); toggleTag(type,fi,ti,si,code); });
+        chips.appendChild(chip);
+      });
+      span.appendChild(chips);
+    }
+    span.addEventListener('click', () => { if (ST.attr) toggleTag(type, fi, ti, si, ST.attr); });
+    container.appendChild(span);
+  });
+}
+
+function toggleTag(type, fi, ti, si, code) {
+  const tags = type==='user' ? gur(fi,ti).tags : gr(fi,ti,ST.mi).tags;
+  if (!tags[code]) tags[code] = [];
+  const p = tags[code].indexOf(si);
+  if (p >= 0) tags[code].splice(p,1); else tags[code].push(si);
+  startTimer();
+  renderContent();
+  syncCounts();
+  checkFileComplete();
+}
+
+function syncCounts() { updateEmpGrading(); }
+
+function tagCount(tags, codes) {
+  return codes.reduce((a,c) => a + (tags[c] ? tags[c].length : 0), 0);
+}
+
+function updateEmpGrading() {
+  const r = cr(); if (!r) return;
+  const sumAt = tagCount(r.tags, AT_CODES);
+  const sumAc = tagCount(r.tags, AC_CODES);
+  const elAt = document.getElementById('emp-sum-at');
+  const elAc = document.getElementById('emp-sum-ac');
+  if (elAt) elAt.textContent = sumAt;
+  if (elAc) elAc.textContent = sumAc;
+  [...AT_CODES, ...AC_CODES].forEach(c => {
+    const el = document.getElementById('emp-' + c);
+    if (el) el.textContent = r.tags[c] ? r.tags[c].length : 0;
+  });
+}
+
+// ═══════════════════════════════════════════
+// PANEL
+// ═══════════════════════════════════════════
+function ps(dot_color) {
+  const d = document.createElement('div'); d.className = 'panel-section'; return d;
+}
+function sT(text, dotColor) {
+  const d = document.createElement('div'); d.className = 'psec-title';
+  const dot = document.createElement('span'); dot.className = 'dot';
+  if (dotColor) dot.style.background = dotColor;
+  d.append(dot, document.createTextNode(text)); return d;
+}
+
+function renderPanel() {
+  const fi=ST.fi, ti=ST.ti, mi=ST.mi;
+  const panel = document.getElementById('scoring-panel'); panel.innerHTML = '';
+  if (!ST.files[fi]) return;
+  const rating = gr(fi,ti,mi);
+  const ur = gur(fi,ti);
+
+  // Model tabs
+  const ts = ps(); ts.appendChild(sT('Model'));
+  const tr = document.createElement('div'); tr.className = 'model-tabs';
+  MODELS.forEach((m, idx) => {
+    const r = gr(fi,ti,idx);
+    const done = r &&
+      LLM_SCORES.every(f => {
+        if (f.id === 'RT') {
+          const rtVals=Array.isArray(r.scores['RT'])?r.scores['RT'].map(Number):(r.scores['RT']!==undefined?[Number(r.scores['RT'])]:[]);
+          if(rtVals.length===0) return false;
+          if((rtVals.includes(1)||rtVals.includes(2))&&(!r.scores['RT_sub']||r.scores['RT_sub'].length===0)) return false;
+          return true;
+        }
+        if (r.scores[f.id] === undefined) return false;
+        return true;
+      }) &&
+      YN_SCORES.every(f => r.yn[f.id] !== undefined) &&
+      Object.values(r.tags).some(arr => arr.length > 0);
+    const btn = document.createElement('button');
+    btn.className = 'model-tab' + (idx===mi?' active':'') + (done?' done':'');
+    btn.textContent = m;
+    btn.addEventListener('click', () => { ST.mi = idx; ST.attr = null; renderAll(); });
+    tr.appendChild(btn);
+  });
+  ts.appendChild(tr); panel.appendChild(ts);
+
+  // User scores
+  const us = ps(); us.appendChild(sT('User Input Scores', 'var(--yellow)'));
+  USER_SCORES.forEach(field => {
+    const g = document.createElement('div'); g.className = 'score-group';
+    const lbl = document.createElement('div'); lbl.className = 'score-label'; lbl.textContent = field.label;
+    g.appendChild(lbl);
+    const opts = document.createElement('div'); opts.className = 'score-options';
+    field.opts.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'score-btn' + (Number(gur(ST.fi,ST.ti).scores[field.id])===opt.v?' sel':'');
+      btn.textContent = opt.l;
+      const fid = field.id;
+      btn.addEventListener('click', () => { gur(ST.fi,ST.ti).scores[fid]=opt.v; startTimer(); renderAll(); saveProgress(); checkFileComplete(); });
+      opts.appendChild(btn);
+    });
+    g.appendChild(opts); us.appendChild(g);
+  });
+  panel.appendChild(us);
+
+  // Nav
+
+  // Attribute palette
+  const as = ps();
+  const ah = sT('Highlight LLM Attributes — select, then click sentences');
+  const hint = document.createElement('small');
+  hint.textContent = '';
+  hint.style.cssText = 'font-size:9px;text-transform:none;font-weight:400;color:var(--text3);margin-left:4px;';
+  ah.appendChild(hint); as.appendChild(ah);
+  const pal = document.createElement('div'); pal.className = 'attr-palette';
+  ATTRIBUTES.forEach(a => {
+    const btn = document.createElement('button');
+    btn.className = 'attr-btn' + (ST.attr===a.code?' sel':'');
+    const sw = document.createElement('span'); sw.className = 'attr-swatch';
+    sw.style.background = a.bg; sw.style.borderColor = a.color;
+    const cd = document.createElement('span'); cd.className = 'attr-code'; cd.textContent = a.display || a.code;
+    const nm = document.createElement('span'); nm.className = 'attr-name'; nm.textContent = a.name;
+    btn.append(sw, cd, nm);
+    btn.addEventListener('click', () => { ST.attr = ST.attr===a.code ? null : a.code; renderAll(); });
+    pal.appendChild(btn);
+  });
+  as.appendChild(pal); panel.appendChild(as);
+
+  // LLM scores
+  const ls = ps(); ls.appendChild(sT('LLM Response Scores'));
+  LLM_SCORES.forEach(field => {
+    const g = document.createElement('div'); g.className = 'score-group';
+    const lbl = document.createElement('div'); lbl.className = 'score-label'; lbl.textContent = field.label;
+    g.appendChild(lbl);
+    const opts = document.createElement('div'); opts.className = 'score-options';
+    field.opts.forEach(opt => {
+      const btn = document.createElement('button');
+      const _rtcur = gr(ST.fi,ST.ti,ST.mi).scores[field.id];
+      const _rtsel = field.id==='RT'
+        ? (Array.isArray(_rtcur)?_rtcur:[_rtcur!==undefined?Number(_rtcur):null]).includes(opt.v)
+        : Number(_rtcur)===opt.v;
+      btn.className = 'score-btn' + (_rtsel?' sel':'');
+      btn.textContent = opt.l;
+      const fid = field.id;
+      btn.addEventListener('click', () => {
+        const cur = gr(ST.fi,ST.ti,ST.mi);
+        if (fid === 'RT') {
+          if (opt.v === 0) {
+            cur.scores['RT'] = [0]; cur.scores['RT_sub'] = [];
+          } else {
+            let vals = Array.isArray(cur.scores['RT']) ? [...cur.scores['RT']] : [];
+            vals = vals.filter(v => v !== 0);
+            const pos = vals.indexOf(opt.v);
+            if (pos >= 0) vals.splice(pos,1); else vals.push(opt.v);
+            if (vals.length === 0) vals = [0];
+            cur.scores['RT'] = vals;
+            const subs = Array.isArray(cur.scores['RT_sub']) ? cur.scores['RT_sub'] : [];
+            const allowed = vals.flatMap(v => (LLM_SCORES.find(f=>f.id==='RT').sub[v]||[]).map(s=>v+':'+s));
+            cur.scores['RT_sub'] = subs.filter(s => allowed.includes(s));
+          }
+        } else {
+          cur.scores[fid] = opt.v;
+        }
+        startTimer();
+        renderAll(); saveProgress(); checkFileComplete();
+      });
+      opts.appendChild(btn);
+    });
+    g.appendChild(opts);
+    // Sub-type for RT (multi-select)
+    if(field.sub) {
+      const _rtRaw = gr(ST.fi, ST.ti, ST.mi).scores['RT'];
+      const _rtVals = Array.isArray(_rtRaw) ? _rtRaw.map(Number) : (_rtRaw!==undefined?[Number(_rtRaw)]:[]);
+      const _rtSubs = Array.isArray(gr(ST.fi, ST.ti, ST.mi).scores['RT_sub']) ? gr(ST.fi, ST.ti, ST.mi).scores['RT_sub'] : [];
+      [1,2].forEach(rv => {
+        if (!_rtVals.includes(rv) || !field.sub[rv]) return;
+        const slbl = document.createElement('div'); slbl.className = 'sub-label';
+        slbl.textContent = 'Sub-type (' + (rv===1?'Skill-based':'Action-oriented') + '):';
+        const so = document.createElement('div'); so.className = 'score-options';
+        field.sub[rv].forEach(s => {
+          const key = rv+':'+s;
+          const btn = document.createElement('button');
+          btn.className = 'score-btn' + (_rtSubs.includes(key)?' sel':'');
+          btn.textContent = s;
+          btn.addEventListener('click', () => {
+            const cur = gr(ST.fi, ST.ti, ST.mi);
+            const subs = Array.isArray(cur.scores['RT_sub']) ? [...cur.scores['RT_sub']] : [];
+            const pos = subs.indexOf(key);
+            if (pos>=0) subs.splice(pos,1); else subs.push(key);
+            cur.scores['RT_sub'] = subs;
+            renderAll(); saveProgress();
+          });
+          so.appendChild(btn);
+        });
+        g.append(slbl, so);
+      });
+    }
+    ls.appendChild(g);
+  });
+
+  // Yes/No
+  const div = document.createElement('hr'); div.className = 'divider'; ls.appendChild(div);
+  ls.appendChild(sT('Yes / No Questions', 'var(--yellow)'));
+  YN_SCORES.forEach(field => {
+    const row = document.createElement('div'); row.className = 'yn-row';
+    const lbl = document.createElement('span'); lbl.className = 'yn-label';
+    lbl.innerHTML = field.label + (field.note ? ' <span style="font-size:10px;color:var(--text3);font-style:italic;">(' + field.note + ')</span>' : '');
+    const btns = document.createElement('div'); btns.className = 'yn-btns';
+    [1,0].forEach(v => {
+      const btn = document.createElement('button');
+      btn.className = 'score-btn' + (Number(gr(ST.fi,ST.ti,ST.mi).yn[field.id])===v?' sel':'');
+      btn.textContent = v===0 ? 'No' : 'Yes';
+      const fid = field.id;
+      btn.addEventListener('click', () => { gr(ST.fi,ST.ti,ST.mi).yn[fid]=v; startTimer(); renderAll(); saveProgress(); checkFileComplete(); });
+      btns.appendChild(btn);
+    });
+    row.append(lbl, btns); ls.appendChild(row);
+  });
+  panel.appendChild(ls);
+
+  // Empathy grading
+  const eg = ps(); eg.appendChild(sT('Empathy Grading', '#818cf8'));
+  const empSums = [
+    {label:'Sum of Inaccurate Empathy', id:'emp-sum-at', val: tagCount(gr(ST.fi,ST.ti,ST.mi).tags, AT_CODES), color:'#63e6be'},
+    {label:'Sum of Accurate Empathy',  id:'emp-sum-ac', val: tagCount(gr(ST.fi,ST.ti,ST.mi).tags, AC_CODES), color:'#818cf8'},
+  ];
+  empSums.forEach(e => {
+    const row = document.createElement('div'); row.className = 'emp-row';
+    const lbl = document.createElement('span'); lbl.className = 'emp-row-label'; lbl.textContent = e.label;
+    const val = document.createElement('span'); val.className = 'emp-row-val'; val.id = e.id;
+    val.textContent = e.val; val.style.color = e.color;
+    row.append(lbl, val); eg.appendChild(row);
+  });
+  // Breakdown
+  [[AT_CODES, 'Inaccurate', '#63e6be'], [AC_CODES, 'Accurate', '#818cf8']].forEach(([codes, label, color]) => {
+    const sec = document.createElement('div'); sec.className = 'emp-sub-section';
+    const title = document.createElement('div'); title.className = 'emp-sub-title';
+    title.textContent = label; title.style.color = color; sec.appendChild(title);
+    codes.forEach(c => {
+      const a = ATTRIBUTES.find(x => x.code === c);
+      const row = document.createElement('div'); row.className = 'emp-sub-row';
+      const nm = document.createElement('span'); nm.className = 'emp-sub-name'; nm.textContent = a ? a.name : c;
+      const vl = document.createElement('span'); vl.className = 'emp-sub-val'; vl.id = 'emp-' + c;
+      vl.textContent = gr(ST.fi,ST.ti,ST.mi).tags[c] ? gr(ST.fi,ST.ti,ST.mi).tags[c].length : 0;
+      row.append(nm, vl); sec.appendChild(row);
+    });
+    eg.appendChild(sec);
+  });
+  panel.appendChild(eg);
+
+
+
+}
+
+// ═══════════════════════════════════════════
+// EXPORT
+// ═══════════════════════════════════════════
+function exportCSV() {
+  const hdrs = [
+    'annotator_id','filename','file_time_seconds','turn','history_depth',
+    'user_typicality','user_evocative','user_sensitivity','user_request_info','user_underlying','user_tagged',
+    ...MODELS.flatMap(m => [
+      m+'_S_score',
+      m+'_AUR_score',
+      m+'_TD_score',
+      m+'_FIX_score',
+      m+'_RT_score', m+'_RT_sub',
+      m+'_TN_score',
+      m+'_QOC_score',
+      m+'_LM_score',
+      m+'_ME_score',
+      m+'_EMP_score',
+      m+'_yn_decisive', m+'_yn_assumes', m+'_yn_introduces', m+'_yn_harmful', m+'_yn_incoherent',
+      m+'_sum_attempted_empathy', m+'_sum_accurate_empathy',
+      m+'_V_count', m+'_N_count', m+'_AS_count', m+'_S2_count',
+      m+'_VA_count', m+'_NA_count', m+'_ASA_count', m+'_SA_count', m+'_INC_count',
+      ...['SEN','AUR','TEN','DIR','FIX','RECT','TSH','QOP','QCL','LMT','MEN','VIN','NIN','ASIN','SIN','VAC','NAC','ASAC','SAC','INC'].map(c => m+'_'+c)
+    ])
+  ];
+  const rows = [hdrs];
+  ST.files.forEach((file, fi) => {
+    file.turns.forEach((turn, ti) => {
+      const u = gur(fi,ti) || {scores:{}, tags:{}};
+      const timerSecs = ST.timerSeconds[fi] || 0;
+      const row = [
+        ST.id, file.filename, timerSecs, turn['Turn']||(ti+1), turn['History Depth']||'',
+        u.scores.typicality??'', u.scores.evocative??'', u.scores.sensitivity??'',
+        u.scores.requestInfo??'', u.scores.underlying??'',
+        tStr(u.tags, turn['User Input']||'')
+      ];
+      MODELS.forEach((m, mi) => {
+        const r = gr(fi,ti,mi) || {scores:{}, yn:{}, tags:{}};
+        const s = r.scores, yn = r.yn;
+        LLM_SCORES.forEach(f => {
+          if (f.id==='RT') {
+            const rtArr=Array.isArray(s['RT'])?s['RT'].map(Number):(s['RT']!==undefined?[Number(s['RT'])]:[]);
+            row.push(rtArr.join('|'));
+            const subArr=Array.isArray(s['RT_sub'])?s['RT_sub']:(s['RT_sub']?[s['RT_sub']]:[]);
+            row.push(subArr.map(v=>v.includes(':')?v.split(':').slice(1).join(':'):v).join('|'));
+          } else {
+            row.push(s[f.id]??'');
+          }
+        });
+        YN_SCORES.forEach(f => row.push(yn[f.id]??''));
+        row.push(tagCount(r.tags, AT_CODES));
+        row.push(tagCount(r.tags, AC_CODES));
+        AT_CODES.forEach(c => row.push(r.tags[c]?r.tags[c].length:0));
+        AC_CODES.forEach(c => row.push(r.tags[c]?r.tags[c].length:0));
+        row.push(r.tags['INC']?r.tags['INC'].length:0);
+        const _llmText = turn[COL_MAP[m]]||'';
+        ['SEN','AUR','TEN','DIR','FIX','RECT','TSH','QOP','QCL','LMT','MEN','VIN','NIN','ASIN','SIN','VAC','NAC','ASAC','SAC','INC'].forEach(c => row.push(getAttrSentences(r.tags, _llmText, c)));
+      });
+      rows.push(row);
+    });
+  });
+  const csv = rows.map(r => r.map(v => '"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\n');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([csv], {type:'text/csv'}));
+  a.download = 'ratings_' + ST.id.replace(/\s+/g,'').toLowerCase() + '_' + (ST.datasetName||'dataset') + '.csv';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  showToast('CSV downloaded!');
+}
+
+function tStr(tags, text) {
+  // Legacy: kept for compatibility but no longer used in export
+  const sents = (text.match(/[^.!?\n]+[.!?]*\s*/g)||[text]).map(s=>s.trim()).filter(Boolean);
+  return Object.entries(tags)
+    .filter(([,v]) => v.length > 0)
+    .map(([code, idxs]) => code + ': ' + idxs.map(i => sents[i] ? '"'+sents[i]+'"' : '['+i+']').join(' | '))
+    .join(' || ');
+}
+
+function getAttrSentences(tags, text, code) {
+  // Returns highlighted sentence texts for a specific attribute code, joined by ' | '
+  const sents = (text.match(/[^.!?\n]+[.!?]*\s*/g)||[text]).map(s=>s.trim()).filter(Boolean);
+  const idxs = tags[code] || [];
+  if (!idxs.length) return '';
+  return idxs.map(i => sents[i] || '').filter(Boolean).join(' | ');
+}
+
+function checkFileComplete() {
+  const fi = ST.fi;
+  const {d, t} = fileProg(fi);
+  if (d === t && t > 0 && !ST.timerDone[fi]) {
+    stopTimerForFile(fi);
+    saveProgress();
+  }
+}
+
+
+function saveJSON(){
+  const data={annotator_id:ST.id,R:ST.R,U:ST.U,fi:ST.fi,ti:ST.ti,timerSeconds:ST.timerSeconds,timerStarted:ST.timerStarted,timerDone:ST.timerDone};
+  const json=JSON.stringify(data,null,2);
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([json],{type:'application/json'}));
+  a.download='progress_'+(ST.id.replace(/\s+/g,'').toLowerCase()||'anon')+'_'+Date.now()+'.json';
+  document.body.appendChild(a);a.click();document.body.removeChild(a);
+  showToast('JSON saved!');
+}
+
+function loadJSON(file){
+  const reader=new FileReader();
+  reader.onload=function(e){
+    try{
+      const data=JSON.parse(e.target.result);
+      if(data.R&&data.R.length===ST.files.length){
+        ST.R=data.R;ST.U=data.U;ST.fi=data.fi||0;ST.ti=data.ti||0;
+        ST.timerSeconds=data.timerSeconds||{};ST.timerStarted=data.timerStarted||{};ST.timerDone=data.timerDone||{};
+        if(data.annotator_id)ST.id=data.annotator_id;
+        saveProgress();buildSidebar();buildTurnNav();renderAll();
+        showToast('Progress loaded from JSON ✓');
+      }else{showToast('JSON does not match this file set.');}
+    }catch(err){showToast('Error reading JSON file.');}
+  };
+  reader.readAsText(file);
+}
+
+function showToast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg; el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2500);
+}
+
+// ─── CSV parser (RFC 4180-ish: handles quoted fields, escaped quotes, embedded newlines) ───
+function parseCSV(text) {
+  const rows = [];
+  let row = [], field = '', i = 0, inQ = false;
+  text = text.replace(/^﻿/, ''); // strip BOM
+  while (i < text.length) {
+    const c = text[i];
+    if (inQ) {
+      if (c === '"') {
+        if (text[i+1] === '"') { field += '"'; i += 2; continue; }
+        inQ = false; i++;
+      } else { field += c; i++; }
+    } else {
+      if (c === '"' && field === '') { inQ = true; i++; }
+      else if (c === ',') { row.push(field); field = ''; i++; }
+      else if (c === '\r') { i++; }
+      else if (c === '\n') { row.push(field); rows.push(row); row = []; field = ''; i++; }
+      else { field += c; i++; }
+    }
+  }
+  if (field.length || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+function csvToObjects(text) {
+  const rows = parseCSV(text);
+  if (rows.length < 2) return [];
+  const headers = rows[0].map(h => h.trim());
+  const out = [];
+  for (let r = 1; r < rows.length; r++) {
+    if (rows[r].length === 1 && rows[r][0] === '') continue; // blank line
+    const obj = {};
+    headers.forEach((h, i) => { obj[h] = rows[r][i] !== undefined ? rows[r][i] : ''; });
+    out.push(obj);
+  }
+  return out;
+}
+
+// ═══════════════════════════════════════════
+// DATASET LOADER (CSV) — added for the public release
+// ═══════════════════════════════════════════
+function loadDataset(file) {
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const rows = csvToObjects(e.target.result);
+      if (!rows.length) return showToast('CSV is empty or has no header row.');
+      // Multi-turn: group rows by the "Conversation" column (override CONVERSATION_KEY below).
+      const CONV_KEY = 'Conversation';
+      if (!(CONV_KEY in rows[0])) {
+        return showToast('CSV is missing the "' + CONV_KEY + '" column. Each row must say which conversation it belongs to.');
+      }
+      const grouped = {};
+      for (const r of rows) {
+        const k = r[CONV_KEY] || 'unknown';
+        if (!grouped[k]) grouped[k] = [];
+        grouped[k].push(r);
+      }
+      const files = Object.entries(grouped).map(([name, turns]) => ({ filename: name, turns: turns }));
+      BAKED_FILES = files;
+      ST.files = BAKED_FILES;
+      ST.datasetName = (file.name.replace(/\.csv$/i,'') || 'dataset').replace(/[^a-zA-Z0-9_-]/g,'_');
+      document.getElementById('empty-state').style.display = 'none';
+      document.getElementById('app').style.display = '';
+      ST.fi = 0; ST.ti = 0; ST.mi = 0;
+      launchApp();
+      showToast('Loaded ' + files.length + ' conversations / ' + rows.length + ' turns ✓');
+    } catch (err) {
+      showToast('CSV parse error: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+}
+// ═══════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════
+window.addEventListener('DOMContentLoaded', () => {
+  // Wire export button
+  window.addEventListener('beforeunload', saveProgress);
+  document.getElementById('btn-export').addEventListener('click', exportCSV);
+  document.getElementById('btn-save-json').addEventListener('click', saveJSON);
+  document.getElementById('file-dataset-input').addEventListener('change', function(){
+    if(this.files[0]) loadDataset(this.files[0]);
+    this.value='';
+  });
+  document.getElementById('empty-state-input').addEventListener('change', function(){
+    if(this.files[0]) loadDataset(this.files[0]);
+    this.value='';
+  });
+  document.getElementById('file-json-input').addEventListener('change', function(){
+    if(this.files[0]) loadJSON(this.files[0]);
+    this.value='';
+  });
+
+  // Wire change ID button
+  document.getElementById('btn-change-id').addEventListener('click', () => {
+    try { localStorage.removeItem('annotator_id'); } catch(e) {}
+    document.getElementById('modal-input').value = '';
+    document.getElementById('modal-error').style.display = 'none';
+    showModal();
+  });
+
+  // Wire modal button + enter key
+  document.getElementById('modal-btn').addEventListener('click', startEvaluating);
+  document.getElementById('modal-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') startEvaluating();
+  });
+
+  // Check for saved annotator ID
+  let savedId = '';
+  try { savedId = localStorage.getItem('annotator_id') || ''; } catch(e) {}
+
+  if (savedId) {
+    ST.id = savedId;
+    hideModal();
+    launchApp();
+  } else {
+    showModal();
+    document.getElementById('modal-input').focus();
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+[
+  {
+    "filename": "demo_conv_01",
+    "turns": [
+      {
+        "Conversation": "demo_conv_01",
+        "Mental Health Topic": "burnout",
+        "Turn": 1,
+        "User Input": "I think I'm burned out at work. I used to care about what I did and now I just feel numb. I'm sleeping fine but I dread Mondays.",
+        "Original Therapist": "That numbness is worth paying attention to — it sounds different from being tired. Can you tell me more about what 'used to care' looked like for you?",
+        "Qwen Output": "What you're describing — the loss of caring rather than just exhaustion — is a meaningful distinction. Before we look at what to do, could you say more about when the numbness started? Sometimes there's a moment or a stretch of time where things shifted, and identifying that can help us understand what's underneath.",
+        "Llama Output": "You should take a vacation immediately. Burnout doesn't go away on its own. Talk to HR about taking medical leave and consider switching jobs. Most people who feel this way need to make a major life change.",
+        "GPT Output": "Burnout that shows up as numbness rather than fatigue is often pointing at something more specific than just overwork. The dread of Mondays suggests there's something about the work itself — or your role in it — that's worth examining. What did caring used to feel like, before it faded?",
+        "Claude Output": "That shift from caring to numb is something I want to take seriously. Numbness can be a kind of self-protection — when something hurts to engage with, sometimes the mind dials it down. I'm curious what you'd want from our conversations. Are you looking to find a way back to caring, or to figure out whether this is a place you want to be at all?",
+        "Gemini Output": "Classic burnout. Here's the protocol: 1) Take 2 weeks off, 2) Start exercising 30 min/day, 3) Quit caffeine, 4) Set boundaries — no email after 6pm. Follow this for a month and you'll feel like yourself again.",
+        "Turn Time (s)": 14.2,
+        "History Depth": 0
+      },
+      {
+        "Conversation": "demo_conv_01",
+        "Mental Health Topic": "burnout",
+        "Turn": 2,
+        "User Input": "It started maybe six months ago, around when my manager left and the new one took over. I told myself it was just adjustment but it never lifted.",
+        "Original Therapist": "Six months is a long time to wait for something to lift. It sounds like the change in management mattered more than you initially let it. What was different about the previous manager?",
+        "Qwen Output": "Six months is a long time to be telling yourself it's just adjustment. The fact that it lined up with the management change feels worth sitting with. What was the relationship with your previous manager like? And how is it different now?",
+        "Llama Output": "Toxic managers are the #1 cause of burnout. You need to either request a transfer, talk to HR about the situation, or start looking for a new job. Don't waste another six months in a bad work environment.",
+        "GPT Output": "Six months of waiting for it to lift is significant. The timing — that it tracked with a leadership change — suggests the work itself may not be the source of the numbness. Something about the new dynamic shifted what work felt like. What was different about how you were managed before?",
+        "Claude Output": "It's striking that you've been carrying this for six months while telling yourself it would pass. That's a lot of self-pressure to 'just adjust.' Before we go to the manager change, I'm curious about that — what would have happened if you'd let yourself name it as something more than adjustment back then?",
+        "Gemini Output": "Manager-induced burnout is fixable but only if you act fast. Document everything they do, request 1:1 meetings to clarify expectations, and if it doesn't improve in 30 days, escalate to HR or transfer. Don't give them another six months.",
+        "Turn Time (s)": 13.7,
+        "History Depth": 1
+      }
+    ]
+  },
+  {
+    "filename": "demo_conv_02",
+    "turns": [
+      {
+        "Conversation": "demo_conv_02",
+        "Mental Health Topic": "grief",
+        "Turn": 1,
+        "User Input": "My dad died eight months ago. Everyone keeps saying it gets easier but I think I'm worse than I was at the funeral.",
+        "Original Therapist": "That's a heavy thing to carry, especially when the world around you seems to think the hard part is over. Tell me what 'worse' looks like for you right now.",
+        "Qwen Output": "What you're describing isn't unusual, even though it can feel like something has gone wrong. The early period after a loss is often shock and a lot of activity — funeral, family, logistics — and the grief sometimes gets louder once that quiets down. Could you say what worse means for you right now? I'd rather not assume.",
+        "Llama Output": "You're experiencing complicated grief, which is a clinical condition. You should see a grief counselor or therapist who specializes in bereavement. Eight months is past the typical window for acute grief, and you may need professional support to process this.",
+        "GPT Output": "That timeline — feeling worse later, not earlier — is more common than people talk about. The funeral has its own kind of energy, and what comes after, when life is supposed to be 'normal' again, can be when the loss actually starts to settle. Can you tell me what worse means for you, day to day?",
+        "Claude Output": "I'm sorry. The 'gets easier' line gets handed out so often that it can make people feel like they're failing when their experience doesn't match it. Grief doesn't run on a schedule. I want to understand what's happening for you — is it that the sadness is more present, or that something else has come up that wasn't there at first?",
+        "Gemini Output": "Eight months is the danger zone for grief becoming depression. You need to be careful. Watch for: sleep changes, appetite changes, loss of interest in activities, hopelessness. If you have any of these, see a doctor about medication.",
+        "Turn Time (s)": 15.9,
+        "History Depth": 0
+      }
+    ]
+  }
+]

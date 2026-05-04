@@ -1,0 +1,56 @@
+model,attribute,attribute_long,total_spans,total_tokens,tokens_per_span
+Qwen,S,Sensitivity,38,1118,29.4211
+Qwen,AUR,Assumption of User Accuracy,56,1440,25.7143
+Qwen,TD,Tentativeness / Directness,295,7444,25.2339
+Qwen,FIX,Fix-It Tendency,133,3552,26.7068
+Qwen,RT,Recommendation Type,134,3292,24.5672
+Qwen,TN,Topic Shift,146,4092,28.0274
+Qwen,QOC,Open / Closed Questions,21,434,20.6667
+Qwen,LM,Language Matching,59,1905,32.2881
+Qwen,ME,Minimal Encouragers,0,0,0.0
+Qwen,EMP,Empathy & Matching,268,6949,25.9291
+Qwen,INC,Incoherence,8,96,12.0
+Llama,S,Sensitivity,17,428,25.1765
+Llama,AUR,Assumption of User Accuracy,27,590,21.8519
+Llama,TD,Tentativeness / Directness,230,4875,21.1957
+Llama,FIX,Fix-It Tendency,94,2079,22.117
+Llama,RT,Recommendation Type,213,5138,24.1221
+Llama,TN,Topic Shift,74,1664,22.4865
+Llama,QOC,Open / Closed Questions,17,260,15.2941
+Llama,LM,Language Matching,33,748,22.6667
+Llama,ME,Minimal Encouragers,0,0,0.0
+Llama,EMP,Empathy & Matching,279,5829,20.8925
+Llama,INC,Incoherence,2,8,4.0
+GPT,S,Sensitivity,21,553,26.3333
+GPT,AUR,Assumption of User Accuracy,61,1394,22.8525
+GPT,TD,Tentativeness / Directness,346,7112,20.5549
+GPT,FIX,Fix-It Tendency,131,2525,19.2748
+GPT,RT,Recommendation Type,208,4659,22.399
+GPT,TN,Topic Shift,128,3250,25.3906
+GPT,QOC,Open / Closed Questions,21,453,21.5714
+GPT,LM,Language Matching,44,1118,25.4091
+GPT,ME,Minimal Encouragers,3,33,11.0
+GPT,EMP,Empathy & Matching,260,5420,20.8462
+GPT,INC,Incoherence,0,0,0.0
+Claude,S,Sensitivity,31,542,17.4839
+Claude,AUR,Assumption of User Accuracy,54,1034,19.1481
+Claude,TD,Tentativeness / Directness,322,4875,15.1398
+Claude,FIX,Fix-It Tendency,107,1436,13.4206
+Claude,RT,Recommendation Type,138,2049,14.8478
+Claude,TN,Topic Shift,121,1797,14.8512
+Claude,QOC,Open / Closed Questions,151,2246,14.8742
+Claude,LM,Language Matching,60,1177,19.6167
+Claude,ME,Minimal Encouragers,0,0,0.0
+Claude,EMP,Empathy & Matching,266,4661,17.5226
+Claude,INC,Incoherence,1,9,9.0
+Gemini,S,Sensitivity,16,462,28.875
+Gemini,AUR,Assumption of User Accuracy,42,1075,25.5952
+Gemini,TD,Tentativeness / Directness,307,7464,24.3127
+Gemini,FIX,Fix-It Tendency,135,3577,26.4963
+Gemini,RT,Recommendation Type,154,4089,26.5519
+Gemini,TN,Topic Shift,162,4362,26.9259
+Gemini,QOC,Open / Closed Questions,11,262,23.8182
+Gemini,LM,Language Matching,54,1760,32.5926
+Gemini,ME,Minimal Encouragers,0,0,0.0
+Gemini,EMP,Empathy & Matching,241,6374,26.4481
+Gemini,INC,Incoherence,6,91,15.1667

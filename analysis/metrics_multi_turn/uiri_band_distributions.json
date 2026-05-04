@@ -1,0 +1,1268 @@
+{
+  "HOPE": {
+    "per_conv": [
+      {
+        "conv_id": "HOPE_topic01",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 8,
+          "Medium": 2,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 80.0,
+          "Medium": 20.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.17,
+        "min_uiri": 0.1,
+        "max_uiri": 0.4
+      },
+      {
+        "conv_id": "HOPE_topic02",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 5,
+          "Medium": 5,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 50.0,
+          "Medium": 50.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.24,
+        "min_uiri": 0.1,
+        "max_uiri": 0.4
+      },
+      {
+        "conv_id": "HOPE_topic03",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 7,
+          "Medium": 3,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 70.0,
+          "Medium": 30.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.23,
+        "min_uiri": 0.2,
+        "max_uiri": 0.3
+      },
+      {
+        "conv_id": "HOPE_topic04",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 6,
+          "Medium": 4,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 60.0,
+          "Medium": 40.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.25,
+        "min_uiri": 0.0,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "HOPE_topic05",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 0,
+          "Medium": 10,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 0.0,
+          "Medium": 100.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.35,
+        "min_uiri": 0.3,
+        "max_uiri": 0.4
+      },
+      {
+        "conv_id": "HOPE_topic06",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 8,
+          "Medium": 2,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 80.0,
+          "Medium": 20.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.17,
+        "min_uiri": 0.0,
+        "max_uiri": 0.4
+      },
+      {
+        "conv_id": "HOPE_topic07",
+        "n_turns": 9,
+        "band_counts": {
+          "Low": 2,
+          "Medium": 7,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 22.22222222222222,
+          "Medium": 77.77777777777779,
+          "High": 0.0
+        },
+        "mean_uiri": 0.3,
+        "min_uiri": 0.1,
+        "max_uiri": 0.4
+      },
+      {
+        "conv_id": "HOPE_topic08",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 2,
+          "Medium": 7,
+          "High": 1
+        },
+        "band_pct": {
+          "Low": 20.0,
+          "Medium": 70.0,
+          "High": 10.0
+        },
+        "mean_uiri": 0.35,
+        "min_uiri": 0.1,
+        "max_uiri": 0.6
+      },
+      {
+        "conv_id": "HOPE_topic09",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 8,
+          "Medium": 2,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 80.0,
+          "Medium": 20.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.2,
+        "min_uiri": 0.1,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "HOPE_topic10",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 3,
+          "Medium": 6,
+          "High": 1
+        },
+        "band_pct": {
+          "Low": 30.0,
+          "Medium": 60.0,
+          "High": 10.0
+        },
+        "mean_uiri": 0.36,
+        "min_uiri": 0.1,
+        "max_uiri": 0.6
+      },
+      {
+        "conv_id": "HOPE_topic11",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 0,
+          "Medium": 3,
+          "High": 7
+        },
+        "band_pct": {
+          "Low": 0.0,
+          "Medium": 30.0,
+          "High": 70.0
+        },
+        "mean_uiri": 0.54,
+        "min_uiri": 0.3,
+        "max_uiri": 0.7
+      },
+      {
+        "conv_id": "HOPE_topic12",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 0,
+          "Medium": 5,
+          "High": 5
+        },
+        "band_pct": {
+          "Low": 0.0,
+          "Medium": 50.0,
+          "High": 50.0
+        },
+        "mean_uiri": 0.47,
+        "min_uiri": 0.3,
+        "max_uiri": 0.7
+      },
+      {
+        "conv_id": "HOPE_topic13",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 3,
+          "Medium": 7,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 30.0,
+          "Medium": 70.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.26,
+        "min_uiri": 0.0,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "HOPE_topic14",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 0,
+          "Medium": 0,
+          "High": 10
+        },
+        "band_pct": {
+          "Low": 0.0,
+          "Medium": 0.0,
+          "High": 100.0
+        },
+        "mean_uiri": 0.72,
+        "min_uiri": 0.7,
+        "max_uiri": 0.8
+      },
+      {
+        "conv_id": "HOPE_topic15",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 0,
+          "Medium": 0,
+          "High": 10
+        },
+        "band_pct": {
+          "Low": 0.0,
+          "Medium": 0.0,
+          "High": 100.0
+        },
+        "mean_uiri": 0.73,
+        "min_uiri": 0.6,
+        "max_uiri": 0.8
+      },
+      {
+        "conv_id": "HOPE_topic16",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 0,
+          "Medium": 0,
+          "High": 10
+        },
+        "band_pct": {
+          "Low": 0.0,
+          "Medium": 0.0,
+          "High": 100.0
+        },
+        "mean_uiri": 0.7,
+        "min_uiri": 0.7,
+        "max_uiri": 0.7
+      },
+      {
+        "conv_id": "HOPE_topic17",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 7,
+          "Medium": 2,
+          "High": 1
+        },
+        "band_pct": {
+          "Low": 70.0,
+          "Medium": 20.0,
+          "High": 10.0
+        },
+        "mean_uiri": 0.22,
+        "min_uiri": 0.0,
+        "max_uiri": 0.6
+      },
+      {
+        "conv_id": "HOPE_topic18",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 0,
+          "Medium": 1,
+          "High": 9
+        },
+        "band_pct": {
+          "Low": 0.0,
+          "Medium": 10.0,
+          "High": 90.0
+        },
+        "mean_uiri": 0.74,
+        "min_uiri": 0.5,
+        "max_uiri": 0.8
+      },
+      {
+        "conv_id": "HOPE_topic19",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 4,
+          "Medium": 6,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 40.0,
+          "Medium": 60.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.28,
+        "min_uiri": 0.2,
+        "max_uiri": 0.4
+      },
+      {
+        "conv_id": "HOPE_topic20",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 5,
+          "Medium": 5,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 50.0,
+          "Medium": 50.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.28,
+        "min_uiri": 0.2,
+        "max_uiri": 0.4
+      },
+      {
+        "conv_id": "HOPE_topic21",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 4,
+          "Medium": 6,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 40.0,
+          "Medium": 60.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.29,
+        "min_uiri": 0.1,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "HOPE_topic22",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 2,
+          "Medium": 8,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 20.0,
+          "Medium": 80.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.34,
+        "min_uiri": 0.1,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "HOPE_topic23",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 1,
+          "Medium": 8,
+          "High": 1
+        },
+        "band_pct": {
+          "Low": 10.0,
+          "Medium": 80.0,
+          "High": 10.0
+        },
+        "mean_uiri": 0.35,
+        "min_uiri": 0.1,
+        "max_uiri": 0.6
+      },
+      {
+        "conv_id": "HOPE_topic24",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 10,
+          "Medium": 0,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 100.0,
+          "Medium": 0.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.16,
+        "min_uiri": 0.1,
+        "max_uiri": 0.2
+      },
+      {
+        "conv_id": "HOPE_topic25",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 4,
+          "Medium": 4,
+          "High": 2
+        },
+        "band_pct": {
+          "Low": 40.0,
+          "Medium": 40.0,
+          "High": 20.0
+        },
+        "mean_uiri": 0.32,
+        "min_uiri": 0.0,
+        "max_uiri": 0.7
+      },
+      {
+        "conv_id": "HOPE_topic26",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 6,
+          "Medium": 4,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 60.0,
+          "Medium": 40.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.25,
+        "min_uiri": 0.1,
+        "max_uiri": 0.4
+      },
+      {
+        "conv_id": "HOPE_topic27",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 4,
+          "Medium": 6,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 40.0,
+          "Medium": 60.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.28,
+        "min_uiri": 0.1,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "HOPE_topic28",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 2,
+          "Medium": 8,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 20.0,
+          "Medium": 80.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.34,
+        "min_uiri": 0.2,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "HOPE_topic29",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 0,
+          "Medium": 6,
+          "High": 4
+        },
+        "band_pct": {
+          "Low": 0.0,
+          "Medium": 60.0,
+          "High": 40.0
+        },
+        "mean_uiri": 0.54,
+        "min_uiri": 0.3,
+        "max_uiri": 0.8
+      },
+      {
+        "conv_id": "HOPE_topic30",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 1,
+          "Medium": 5,
+          "High": 4
+        },
+        "band_pct": {
+          "Low": 10.0,
+          "Medium": 50.0,
+          "High": 40.0
+        },
+        "mean_uiri": 0.47,
+        "min_uiri": 0.1,
+        "max_uiri": 0.6
+      },
+      {
+        "conv_id": "HOPE_topic31",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 1,
+          "Medium": 3,
+          "High": 6
+        },
+        "band_pct": {
+          "Low": 10.0,
+          "Medium": 30.0,
+          "High": 60.0
+        },
+        "mean_uiri": 0.52,
+        "min_uiri": 0.0,
+        "max_uiri": 0.7
+      },
+      {
+        "conv_id": "HOPE_topic32",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 3,
+          "Medium": 7,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 30.0,
+          "Medium": 70.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.32,
+        "min_uiri": 0.1,
+        "max_uiri": 0.4
+      },
+      {
+        "conv_id": "HOPE_topic33",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 8,
+          "Medium": 2,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 80.0,
+          "Medium": 20.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.16,
+        "min_uiri": 0.0,
+        "max_uiri": 0.4
+      },
+      {
+        "conv_id": "HOPE_topic34",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 1,
+          "Medium": 8,
+          "High": 1
+        },
+        "band_pct": {
+          "Low": 10.0,
+          "Medium": 80.0,
+          "High": 10.0
+        },
+        "mean_uiri": 0.42,
+        "min_uiri": 0.2,
+        "max_uiri": 0.7
+      },
+      {
+        "conv_id": "HOPE_topic35",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 4,
+          "Medium": 6,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 40.0,
+          "Medium": 60.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.28,
+        "min_uiri": 0.1,
+        "max_uiri": 0.4
+      },
+      {
+        "conv_id": "HOPE_topic36",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 1,
+          "Medium": 4,
+          "High": 5
+        },
+        "band_pct": {
+          "Low": 10.0,
+          "Medium": 40.0,
+          "High": 50.0
+        },
+        "mean_uiri": 0.53,
+        "min_uiri": 0.2,
+        "max_uiri": 0.7
+      }
+    ],
+    "n_conversations": 36,
+    "total_band_counts": {
+      "Low": 120,
+      "Medium": 162,
+      "High": 77
+    },
+    "total_band_pct": {
+      "Low": 33.42618384401114,
+      "Medium": 45.12534818941504,
+      "High": 21.448467966573816
+    },
+    "avg_per_conv_band_pct": {
+      "Low": 33.39506172839506,
+      "Medium": 45.21604938271605,
+      "High": 21.38888888888889
+    },
+    "avg_per_conv_mean_uiri": 0.36472222222222217
+  },
+  "CareBench": {
+    "per_conv": [
+      {
+        "conv_id": "CareBench_topic01",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 0,
+          "Medium": 9,
+          "High": 1
+        },
+        "band_pct": {
+          "Low": 0.0,
+          "Medium": 90.0,
+          "High": 10.0
+        },
+        "mean_uiri": 0.44,
+        "min_uiri": 0.3,
+        "max_uiri": 0.6
+      },
+      {
+        "conv_id": "CareBench_topic02",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 0,
+          "Medium": 9,
+          "High": 1
+        },
+        "band_pct": {
+          "Low": 0.0,
+          "Medium": 90.0,
+          "High": 10.0
+        },
+        "mean_uiri": 0.41,
+        "min_uiri": 0.3,
+        "max_uiri": 0.6
+      },
+      {
+        "conv_id": "CareBench_topic03",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 2,
+          "Medium": 7,
+          "High": 1
+        },
+        "band_pct": {
+          "Low": 20.0,
+          "Medium": 70.0,
+          "High": 10.0
+        },
+        "mean_uiri": 0.33,
+        "min_uiri": 0.0,
+        "max_uiri": 0.7
+      },
+      {
+        "conv_id": "CareBench_topic04",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 4,
+          "Medium": 6,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 40.0,
+          "Medium": 60.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.26,
+        "min_uiri": 0.1,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "CareBench_topic05",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 2,
+          "Medium": 8,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 20.0,
+          "Medium": 80.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.35,
+        "min_uiri": 0.1,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "CareBench_topic06",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 3,
+          "Medium": 6,
+          "High": 1
+        },
+        "band_pct": {
+          "Low": 30.0,
+          "Medium": 60.0,
+          "High": 10.0
+        },
+        "mean_uiri": 0.33,
+        "min_uiri": 0.0,
+        "max_uiri": 0.6
+      },
+      {
+        "conv_id": "CareBench_topic07",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 0,
+          "Medium": 7,
+          "High": 3
+        },
+        "band_pct": {
+          "Low": 0.0,
+          "Medium": 70.0,
+          "High": 30.0
+        },
+        "mean_uiri": 0.45,
+        "min_uiri": 0.3,
+        "max_uiri": 0.8
+      },
+      {
+        "conv_id": "CareBench_topic08",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 3,
+          "Medium": 7,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 30.0,
+          "Medium": 70.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.33,
+        "min_uiri": 0.1,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "CareBench_topic09",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 2,
+          "Medium": 6,
+          "High": 2
+        },
+        "band_pct": {
+          "Low": 20.0,
+          "Medium": 60.0,
+          "High": 20.0
+        },
+        "mean_uiri": 0.4,
+        "min_uiri": 0.2,
+        "max_uiri": 0.7
+      },
+      {
+        "conv_id": "CareBench_topic10",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 0,
+          "Medium": 8,
+          "High": 2
+        },
+        "band_pct": {
+          "Low": 0.0,
+          "Medium": 80.0,
+          "High": 20.0
+        },
+        "mean_uiri": 0.45,
+        "min_uiri": 0.3,
+        "max_uiri": 0.6
+      },
+      {
+        "conv_id": "CareBench_topic11",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 0,
+          "Medium": 7,
+          "High": 3
+        },
+        "band_pct": {
+          "Low": 0.0,
+          "Medium": 70.0,
+          "High": 30.0
+        },
+        "mean_uiri": 0.5,
+        "min_uiri": 0.3,
+        "max_uiri": 0.8
+      },
+      {
+        "conv_id": "CareBench_topic12",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 0,
+          "Medium": 7,
+          "High": 3
+        },
+        "band_pct": {
+          "Low": 0.0,
+          "Medium": 70.0,
+          "High": 30.0
+        },
+        "mean_uiri": 0.52,
+        "min_uiri": 0.4,
+        "max_uiri": 0.6
+      },
+      {
+        "conv_id": "CareBench_topic13",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 5,
+          "Medium": 5,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 50.0,
+          "Medium": 50.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.28,
+        "min_uiri": 0.2,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "CareBench_topic14",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 4,
+          "Medium": 6,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 40.0,
+          "Medium": 60.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.25,
+        "min_uiri": 0.1,
+        "max_uiri": 0.4
+      },
+      {
+        "conv_id": "CareBench_topic15",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 6,
+          "Medium": 4,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 60.0,
+          "Medium": 40.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.26,
+        "min_uiri": 0.1,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "CareBench_topic16",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 6,
+          "Medium": 4,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 60.0,
+          "Medium": 40.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.21000000000000002,
+        "min_uiri": 0.0,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "CareBench_topic17",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 6,
+          "Medium": 4,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 60.0,
+          "Medium": 40.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.28,
+        "min_uiri": 0.2,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "CareBench_topic18",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 1,
+          "Medium": 8,
+          "High": 1
+        },
+        "band_pct": {
+          "Low": 10.0,
+          "Medium": 80.0,
+          "High": 10.0
+        },
+        "mean_uiri": 0.32,
+        "min_uiri": 0.2,
+        "max_uiri": 0.6
+      },
+      {
+        "conv_id": "CareBench_topic19",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 2,
+          "Medium": 8,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 20.0,
+          "Medium": 80.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.29,
+        "min_uiri": 0.2,
+        "max_uiri": 0.4
+      },
+      {
+        "conv_id": "CareBench_topic20",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 4,
+          "Medium": 5,
+          "High": 1
+        },
+        "band_pct": {
+          "Low": 40.0,
+          "Medium": 50.0,
+          "High": 10.0
+        },
+        "mean_uiri": 0.29,
+        "min_uiri": 0.1,
+        "max_uiri": 0.7
+      },
+      {
+        "conv_id": "CareBench_topic21",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 2,
+          "Medium": 8,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 20.0,
+          "Medium": 80.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.33,
+        "min_uiri": 0.1,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "CareBench_topic22",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 4,
+          "Medium": 6,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 40.0,
+          "Medium": 60.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.27,
+        "min_uiri": 0.1,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "CareBench_topic23",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 6,
+          "Medium": 4,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 60.0,
+          "Medium": 40.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.23,
+        "min_uiri": 0.1,
+        "max_uiri": 0.3
+      },
+      {
+        "conv_id": "CareBench_topic24",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 3,
+          "Medium": 7,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 30.0,
+          "Medium": 70.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.33,
+        "min_uiri": 0.1,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "CareBench_topic25",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 1,
+          "Medium": 9,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 10.0,
+          "Medium": 90.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.38,
+        "min_uiri": 0.2,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "CareBench_topic26",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 1,
+          "Medium": 9,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 10.0,
+          "Medium": 90.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.36,
+        "min_uiri": 0.2,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "CareBench_topic27",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 5,
+          "Medium": 4,
+          "High": 1
+        },
+        "band_pct": {
+          "Low": 50.0,
+          "Medium": 40.0,
+          "High": 10.0
+        },
+        "mean_uiri": 0.28,
+        "min_uiri": 0.0,
+        "max_uiri": 0.6
+      },
+      {
+        "conv_id": "CareBench_topic28",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 8,
+          "Medium": 2,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 80.0,
+          "Medium": 20.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.15,
+        "min_uiri": 0.0,
+        "max_uiri": 0.4
+      },
+      {
+        "conv_id": "CareBench_topic29",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 3,
+          "Medium": 7,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 30.0,
+          "Medium": 70.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.33,
+        "min_uiri": 0.2,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "CareBench_topic30",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 1,
+          "Medium": 9,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 10.0,
+          "Medium": 90.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.39,
+        "min_uiri": 0.1,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "CareBench_topic31",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 1,
+          "Medium": 9,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 10.0,
+          "Medium": 90.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.32,
+        "min_uiri": 0.2,
+        "max_uiri": 0.4
+      },
+      {
+        "conv_id": "CareBench_topic32",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 4,
+          "Medium": 3,
+          "High": 3
+        },
+        "band_pct": {
+          "Low": 40.0,
+          "Medium": 30.0,
+          "High": 30.0
+        },
+        "mean_uiri": 0.42,
+        "min_uiri": 0.1,
+        "max_uiri": 0.9
+      },
+      {
+        "conv_id": "CareBench_topic33",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 0,
+          "Medium": 7,
+          "High": 3
+        },
+        "band_pct": {
+          "Low": 0.0,
+          "Medium": 70.0,
+          "High": 30.0
+        },
+        "mean_uiri": 0.48,
+        "min_uiri": 0.3,
+        "max_uiri": 0.7
+      },
+      {
+        "conv_id": "CareBench_topic34",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 2,
+          "Medium": 7,
+          "High": 1
+        },
+        "band_pct": {
+          "Low": 20.0,
+          "Medium": 70.0,
+          "High": 10.0
+        },
+        "mean_uiri": 0.34,
+        "min_uiri": 0.2,
+        "max_uiri": 0.6
+      },
+      {
+        "conv_id": "CareBench_topic35",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 2,
+          "Medium": 8,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 20.0,
+          "Medium": 80.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.33,
+        "min_uiri": 0.2,
+        "max_uiri": 0.5
+      },
+      {
+        "conv_id": "CareBench_topic36",
+        "n_turns": 10,
+        "band_counts": {
+          "Low": 4,
+          "Medium": 6,
+          "High": 0
+        },
+        "band_pct": {
+          "Low": 40.0,
+          "Medium": 60.0,
+          "High": 0.0
+        },
+        "mean_uiri": 0.28,
+        "min_uiri": 0.1,
+        "max_uiri": 0.5
+      }
+    ],
+    "n_conversations": 36,
+    "total_band_counts": {
+      "Low": 97,
+      "Medium": 236,
+      "High": 27
+    },
+    "total_band_pct": {
+      "Low": 26.944444444444443,
+      "Medium": 65.55555555555556,
+      "High": 7.5
+    },
+    "avg_per_conv_band_pct": {
+      "Low": 26.944444444444443,
+      "Medium": 65.55555555555556,
+      "High": 7.5
+    },
+    "avg_per_conv_mean_uiri": 0.3380555555555556
+  }
+}
