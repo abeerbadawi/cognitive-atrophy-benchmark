@@ -22,8 +22,9 @@ analysis/
 │   ├── compute_uiri_multiturn.py
 │   ├── compute_correlations_multiturn.py
 │   ├── compute_per_conversation_correlations.py
-│   ├── compute_response_multiturn.py     ← turn-level response analysis
+│   ├── compute_response_multiturn.py     ← turn-level response analysis (per-attribute risk)
 │   ├── compute_flags_multiturn.py        ← 5 binary flags across turns
+│   ├── compute_ari_multiturn.py          ← multi-turn cluster (D, E, R, F) + composite ARI
 │   └── compute_highlights_multiturn.py
 ├── requirements.txt
 └── README.md
@@ -51,15 +52,15 @@ python metrics_multi_turn/compute_correlations_multiturn.py
 python metrics_multi_turn/compute_per_conversation_correlations.py
 python metrics_multi_turn/compute_response_multiturn.py
 python metrics_multi_turn/compute_flags_multiturn.py
-python metrics_multi_turn/compute_highlights_multiturn.py    # depends on compute_response_multiturn.py output
+python metrics_multi_turn/compute_ari_multiturn.py             # depends on response + flags outputs
+python metrics_multi_turn/compute_highlights_multiturn.py      # depends on response output
 ```
 
 Each script writes its outputs (CSVs, JSON, summary tables) into the same
 `data/` folder, alongside the input CSVs, and prints a summary to stdout.
-Re-running is idempotent — outputs are overwritten. The only ordering
-constraint is that `compute_highlights_multiturn.py` reads
-`per_turn_llm_attrs.csv` produced by `compute_response_multiturn.py`,
-so run the latter first.
+Re-running is idempotent — outputs are overwritten. Ordering constraints:
+- `compute_ari_multiturn.py` reads `per_turn_llm_attrs.csv` (from `compute_response_multiturn.py`) and `per_turn_flags.csv` (from `compute_flags_multiturn.py`), so run those first.
+- `compute_highlights_multiturn.py` reads `per_turn_llm_attrs.csv` from `compute_response_multiturn.py`.
 
 To re-fetch the input CSVs from Hugging Face (e.g. if a newer revision is
 released), pull them down and replace the bundled files:

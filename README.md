@@ -3,6 +3,8 @@
 > **Status:** Anonymous code release for the NeurIPS 2026 Evaluations & Datasets Track submission.
 > Author identities, affiliations, and acknowledgements are intentionally omitted during double-blind review and will be added upon acceptance.
 
+![Cognitive Atrophy attribute schema: 5 user-context attributes (U), 10 LLM-response behaviour attributes (R), and 5 binary risk flags (F).](figures/cara_schema.png)
+
 This repository contains all executable artifacts that accompany the
 **Cognitive Atrophy Benchmark** — a multi-attribute evaluation framework for
 LLM behavior in mental-health support contexts. It pairs with the public

@@ -106,7 +106,7 @@ for r in all_rows:
 print(f"Expanded records: {len(expanded)}  (719 × 5 = 3,595 expected)")
 
 # Save the per-turn-LLM master CSV
-out_csv = HERE / "per_turn_flags.csv"
+out_csv = DATA_DIR / "per_turn_flags.csv"
 with open(out_csv, "w", newline="") as f:
     fields = ["dataset", "topic", "conv_id", "turn", "annotator", "llm_slot", "llm_name",
               *[s[0] for s in FLAGS], "F_burden"]
@@ -187,7 +187,7 @@ for ds in ["HOPE", "CareBench"]:
         rates["by_turn"][ds][t]["F_burden_mean"] = sum(burdens) / len(burdens) if burdens else None
         rates["by_turn"][ds][t]["n_responses"] = len(burdens)
 
-with open(HERE / "per_flag_firing_rates.json", "w") as f:
+with open(DATA_DIR / "per_flag_firing_rates.json", "w") as f:
     json.dump(rates, f, indent=2)
 print(f"Wrote per_flag_firing_rates.json")
 
@@ -239,7 +239,7 @@ for (conv_id, slot), rs in by_conv_llm.items():
 
 per_conv_llm.sort(key=lambda r: (r["dataset"], r["topic"], r["llm_slot"]))
 fields = list(per_conv_llm[0].keys())
-with open(HERE / "per_conversation_flag_statics.csv", "w", newline="") as f:
+with open(DATA_DIR / "per_conversation_flag_statics.csv", "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=fields)
     w.writeheader()
     for row in per_conv_llm:
@@ -267,7 +267,7 @@ summary["combined"] = {
     "per_flag_firing_rate": {short: fmt(rates["by_dataset_combined"][short]["rate"]) for short, _, _ in FLAGS},
 }
 
-with open(HERE / "results_summary.json", "w") as f:
+with open(DATA_DIR / "flags_results_summary.json", "w") as f:
     json.dump(summary, f, indent=2)
 print(f"Wrote results_summary.json")
 

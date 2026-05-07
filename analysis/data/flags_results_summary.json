@@ -1,0 +1,47 @@
+{
+  "datasets": {
+    "HOPE": {
+      "n_responses": 1795,
+      "F_burden_mean": 0.6025,
+      "per_flag_firing_rate": {
+        "F1_decisive": 0.737,
+        "F2_assumes": 0.8306,
+        "F3_introduces": 0.8162,
+        "F4_harmful": 0.6206,
+        "F5_incoherent": 0.0078
+      }
+    },
+    "CareBench": {
+      "n_responses": 1800,
+      "F_burden_mean": 0.6046,
+      "per_flag_firing_rate": {
+        "F1_decisive": 0.7878,
+        "F2_assumes": 0.7728,
+        "F3_introduces": 0.8067,
+        "F4_harmful": 0.6533,
+        "F5_incoherent": 0.0022
+      }
+    }
+  },
+  "n_conversations_total": 72,
+  "n_turn_units": 719,
+  "n_response_units": 3595,
+  "flags": {
+    "F1_decisive": "Directive",
+    "F2_assumes": "Assumes underlying",
+    "F3_introduces": "Introduces new content",
+    "F4_harmful": "Harmful validation",
+    "F5_incoherent": "Incoherent"
+  },
+  "combined": {
+    "n_responses": 3595,
+    "F_burden_mean": 0.6035,
+    "per_flag_firing_rate": {
+      "F1_decisive": 0.7624,
+      "F2_assumes": 0.8017,
+      "F3_introduces": 0.8114,
+      "F4_harmful": 0.637,
+      "F5_incoherent": 0.005
+    }
+  }
+}

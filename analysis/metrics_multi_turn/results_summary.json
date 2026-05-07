@@ -1,47 +1,63 @@
 {
   "datasets": {
     "HOPE": {
-      "n_responses": 1795,
-      "F_burden_mean": 0.6025,
-      "per_flag_firing_rate": {
-        "F1_decisive": 0.737,
-        "F2_assumes": 0.8306,
-        "F3_introduces": 0.8162,
-        "F4_harmful": 0.6206,
-        "F5_incoherent": 0.0078
-      }
+      "n_conversations": 36,
+      "n_turns_total": 359,
+      "UIRI_open_mean": 0.3833,
+      "UIRI_peak_mean": 0.5417,
+      "UIRI_mean_mean": 0.3647,
+      "UIRI_delta_mean": -0.0361,
+      "UIRI_sigma_mean_within": 0.123,
+      "UIRI_mean_min": 0.16,
+      "UIRI_mean_max": 0.74,
+      "band_total_pct": {
+        "Low": 33.42618384401114,
+        "Medium": 45.12534818941504,
+        "High": 21.448467966573816
+      },
+      "band_avg_per_conv_pct": {
+        "Low": 33.39506172839506,
+        "Medium": 45.21604938271605,
+        "High": 21.38888888888889
+      },
+      "avg_per_conv_mean_uiri": 0.3647
     },
     "CareBench": {
-      "n_responses": 1800,
-      "F_burden_mean": 0.6046,
-      "per_flag_firing_rate": {
-        "F1_decisive": 0.7878,
-        "F2_assumes": 0.7728,
-        "F3_introduces": 0.8067,
-        "F4_harmful": 0.6533,
-        "F5_incoherent": 0.0022
-      }
+      "n_conversations": 36,
+      "n_turns_total": 360,
+      "UIRI_open_mean": 0.4333,
+      "UIRI_peak_mean": 0.5556,
+      "UIRI_mean_mean": 0.3381,
+      "UIRI_delta_mean": -0.1556,
+      "UIRI_sigma_mean_within": 0.128,
+      "UIRI_mean_min": 0.15,
+      "UIRI_mean_max": 0.52,
+      "band_total_pct": {
+        "Low": 26.944444444444443,
+        "Medium": 65.55555555555556,
+        "High": 7.5
+      },
+      "band_avg_per_conv_pct": {
+        "Low": 26.944444444444443,
+        "Medium": 65.55555555555556,
+        "High": 7.5
+      },
+      "avg_per_conv_mean_uiri": 0.3381
     }
   },
-  "n_conversations_total": 72,
-  "n_turn_units": 719,
-  "n_response_units": 3595,
-  "flags": {
-    "F1_decisive": "Directive",
-    "F2_assumes": "Assumes underlying",
-    "F3_introduces": "Introduces new content",
-    "F4_harmful": "Harmful validation",
-    "F5_incoherent": "Incoherent"
-  },
-  "combined": {
-    "n_responses": 3595,
-    "F_burden_mean": 0.6035,
-    "per_flag_firing_rate": {
-      "F1_decisive": 0.7624,
-      "F2_assumes": 0.8017,
-      "F3_introduces": 0.8114,
-      "F4_harmful": 0.637,
-      "F5_incoherent": 0.005
+  "overall": {
+    "n_conversations": 72,
+    "n_turns_total": 719,
+    "UIRI_open_mean": 0.4083,
+    "UIRI_peak_mean": 0.5486,
+    "UIRI_mean_mean": 0.3514,
+    "UIRI_delta_mean": -0.0958,
+    "UIRI_sigma_mean_within": 0.1255,
+    "band_total_pct": {
+      "Low": 30.18,
+      "Medium": 55.35,
+      "High": 14.46
     }
-  }
+  },
+  "n_conversations_total": 72
 }
