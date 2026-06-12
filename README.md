@@ -1,16 +1,12 @@
 # Cognitive Atrophy Benchmark — Code Repository
 
-> **Status:** Anonymous code release for the NeurIPS 2026 Evaluations & Datasets Track submission.
-> Author identities, affiliations, and acknowledgements are intentionally omitted during double-blind review and will be added upon acceptance.
 
 ![Cognitive Atrophy attribute schema: 5 user-context attributes (U), 10 LLM-response behaviour attributes (R), and 5 binary risk flags (F).](figures/cara_schema.png)
 
-This repository contains all executable artifacts that accompany the
-**Cognitive Atrophy Benchmark** — a multi-attribute evaluation framework for
-LLM behavior in mental-health support contexts. It pairs with the public
-dataset hosted on Hugging Face:
+This repository contains all executable artifacts that accompany the **Cognitive Atrophy Benchmark** — a multi-attribute evaluation framework for
+LLM behavior in mental-health support contexts. It pairs with the public dataset hosted on Hugging Face:
 
-🤗 **Dataset:** https://huggingface.co/datasets/CABenchmark/Cognitive_Atrophy_Benchmark
+🤗 **Dataset:** [https://huggingface.co/datasets/CABenchmark/Cognitive_Atrophy_Benchmark](https://huggingface.co/datasets/abadawi/Cognitive_Atrophy_Benchmark)
 
 ## What's in here
 
@@ -138,11 +134,11 @@ Please cite them in addition to this benchmark when using any subset:
   note   = {Released on Hugging Face: https://huggingface.co/datasets/nbertagnolli/counsel-chat}
 }
 
-@inproceedings{yuan-2025-carebench,
+@inproceedings{yuan-2026-carebench,
   title     = {Can {LLM}s Move Beyond Short Exchanges to Realistic Therapy Conversations?},
   author    = {Yuan, Zhengqing and Wu, Liang and Xu, Jian and Zhang, Zheyuan and Shi, Kaiwen and Sun, Weixiang and Sun, Lichao and Ye, Yanfang},
   booktitle = {The Fourteenth International Conference on Learning Representations (ICLR)},
-  year      = {2025},
+  year      = {2026},
   url       = {https://openreview.net/forum?id=3Bdl1wL1S3}
 }
 
@@ -156,7 +152,3 @@ Please cite them in addition to this benchmark when using any subset:
   doi       = {10.1145/3488560.3498509}
 }
 ```
-
----
-
-*Last updated for the NeurIPS 2026 submission. Repository content is mirrored at https://anonymous.4open.science for double-blind review.*
