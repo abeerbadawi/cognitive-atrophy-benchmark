@@ -217,20 +217,3 @@ dataset particulars. To run them on a different evaluation set:
   ordinal statistics. If your annotation protocol allows compound codes,
   `compute_attributes.py` reports the compound-row count separately so you
   can re-include them with custom logic.
-
-## License
-
-MIT. See `../LICENSE` (top-level of the github_code repository).
-
-## Citation
-
-If you use these analysis scripts, please cite the parent benchmark:
-
-```bibtex
-@misc{cognitive_atrophy_benchmark_2026,
-  title  = {Cognitive Atrophy Benchmark: Evaluating LLMs in Mental-Health Support Contexts},
-  author = {Anonymous Authors},
-  year   = {2026},
-  note   = {Anonymous submission to the NeurIPS 2026 Evaluations \& Datasets Track.}
-}
-```
