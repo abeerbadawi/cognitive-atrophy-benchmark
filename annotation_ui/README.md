@@ -164,19 +164,3 @@ python -m http.server 8000
 # then open http://localhost:8000/single_turn_evaluator.html
 ```
 
-## License
-
-MIT. See `LICENSE` in this folder.
-
-## Citation
-
-If this annotation UI is useful in your work, please cite the parent benchmark:
-
-```bibtex
-@misc{cognitive_atrophy_benchmark_2026,
-  title  = {Cognitive Atrophy Benchmark: Evaluating LLMs in Mental-Health Support Contexts},
-  author = {Anonymous Authors},
-  year   = {2026},
-  note   = {Anonymous submission to the NeurIPS 2026 Evaluations & Datasets Track.}
-}
-```
