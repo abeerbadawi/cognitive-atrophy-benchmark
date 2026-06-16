@@ -103,11 +103,11 @@ This code accompanies a NeurIPS 2026 Evaluations & Datasets Track submission. Th
 ## Citation
 
 ```bibtex
-@misc{cognitive_atrophy_benchmark_2026,
-  title  = {Cognitive Atrophy Benchmark: Evaluating LLMs in Mental-Health Support Contexts},
-  author = {Anonymous Authors},
-  year   = {2026},
-  note   = {Anonymous submission to the NeurIPS 2026 Evaluations \& Datasets Track. Author information will be added upon acceptance.}
+@article{badawi2026cognitiveatrophy,
+  title   = {Towards Understanding and Measuring Cognitive Atrophy in LLM Behaviour},
+  author  = {Badawi, Abeer and Olatosi, Moyosoreoluwa and Baghbanzadeh, Negin and Seyyed-Kalantari, Laleh and Rudzicz, Frank and Rosenbaum, R. Shayna and Pishdadian, Sara and Dolatabadi, Elham},
+  journal = {arXiv preprint},
+  year    = {2026}
 }
 ```
 
