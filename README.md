@@ -1,5 +1,8 @@
 # Cognitive Atrophy Benchmark — Code Repository
 
+![Overview of the COGNITIVE ATROPHY BENCH annotation pipeline, including user-context scoring, response-behaviour evaluation, binary risk flags, and span-grounded evidence.](figures/main3.jpg)
+
+**Figure 1:** Overview of the **COGNITIVE ATROPHY BENCH** annotation pipeline, including user-context scoring, response-behaviour evaluation, binary risk flags, and span-grounded evidence.
 
 ![Cognitive Atrophy attribute schema: 5 user-context attributes (U), 10 LLM-response behaviour attributes (R), and 5 binary risk flags (F).](figures/cara_schema.png)
 
