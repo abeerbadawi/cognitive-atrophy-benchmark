@@ -106,7 +106,7 @@ This code accompanies a NeurIPS 2026 Evaluations & Datasets Track submission. Th
 @article{badawi2026cognitiveatrophy,
   title   = {Towards Understanding and Measuring Cognitive Atrophy in LLM Behaviour},
   author  = {Badawi, Abeer and Olatosi, Moyosoreoluwa and Baghbanzadeh, Negin and Seyyed-Kalantari, Laleh and Rudzicz, Frank and Rosenbaum, R. Shayna and Pishdadian, Sara and Dolatabadi, Elham},
-  journal = {arXiv preprint},
+  journal = {[arXiv preprint](https://arxiv.org/pdf/2606.18129)},
   year    = {2026}
 }
 ```
