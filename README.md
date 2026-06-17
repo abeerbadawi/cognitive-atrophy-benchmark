@@ -6,7 +6,9 @@
 This repository contains all executable artifacts that accompany the **Cognitive Atrophy Benchmark** — a multi-attribute evaluation framework for
 LLM behavior in mental-health support contexts. It pairs with the public dataset hosted on Hugging Face:
 
-🤗 **Dataset:** [https://huggingface.co/datasets/abadawi/Cognitive_Atrophy_Benchmark](https://huggingface.co/datasets/abadawi/Cognitive_Atrophy_Benchmark)
+**Links**
+- 📄 **Paper:** [arXiv:2606.18129](https://arxiv.org/pdf/2606.18129)
+- 🤗 **Dataset:** [Hugging Face: Cognitive Atrophy Benchmark](https://huggingface.co/datasets/abadawi/Cognitive_Atrophy_Benchmark)
 
 ## What's in here
 
