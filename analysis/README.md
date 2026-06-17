@@ -201,19 +201,3 @@ dataset particulars. To run them on a different evaluation set:
 3. The reviewer column can use any pseudonyms; if you have fewer or more
    than six reviewers + gold, the scripts adapt automatically (no
    hard-coded reviewer count).
-
-## Known limitations
-
-* Scripts are research-grade: paths and filenames are constants at the top
-  of each file, not CLI arguments. Edit them in place if your data lives
-  elsewhere.
-* Some scripts also write to a sibling `data/` folder (in addition to
-  reading from it). Outputs do not collide across metrics, but if you re-run
-  with different inputs, manually clear stale output files.
-* Token counts use OpenAI's `cl100k_base` tokenizer via `tiktoken`. If you
-  are on an air-gapped machine and the first call fails to download the
-  vocab, set `TIKTOKEN_CACHE_DIR` to a local copy.
-* The original RT-attribute compound entries (e.g. `1|2`) are excluded from
-  ordinal statistics. If your annotation protocol allows compound codes,
-  `compute_attributes.py` reports the compound-row count separately so you
-  can re-include them with custom logic.
