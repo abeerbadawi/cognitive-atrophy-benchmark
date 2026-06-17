@@ -6,6 +6,8 @@
 
 ![Cognitive Atrophy attribute schema: 5 user-context attributes (U), 10 LLM-response behaviour attributes (R), and 5 binary risk flags (F).](figures/cara_schema.png)
 
+**Figure 2:** The behavioural attributes used in COGNITIVE ATROPHY BENCH. User-context attributes (U) characterize the clinical demands of the input message; response-behaviour attributes (R) characterize observable LLM response patterns; binary flags (F) capture global risk events.
+
 This repository contains all executable artifacts that accompany the **Cognitive Atrophy Benchmark** — a multi-attribute evaluation framework for
 LLM behavior in mental-health support contexts. It pairs with the public dataset hosted on Hugging Face:
 
